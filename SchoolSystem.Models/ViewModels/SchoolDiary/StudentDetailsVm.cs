@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using SchoolSystem.Models.EntityModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SchoolSystem.Models.EntityModels
+namespace SchoolSystem.Models.ViewModels.SchoolDiary
 {
-    public class Student
+    public class StudentDetailsVm
     {
-        public Student()
-        {
-            this.Marks = new HashSet<Mark>();
-            this.Notes = new HashSet<Note>();
-        }
-
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -29,9 +28,5 @@ namespace SchoolSystem.Models.EntityModels
         public int Delays { get; set; }
 
         public virtual Grade Grade { get; set; }
-
-        public virtual ICollection<Mark> Marks { get; set; }
-
-        public virtual ICollection<Note> Notes { get; set; }
     }
 }

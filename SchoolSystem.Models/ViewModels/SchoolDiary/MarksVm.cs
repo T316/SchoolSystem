@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace SchoolSystem.Models.ViewModels.SchoolDiary
 {
-    public class AllStudentsFromGradeVm
+    public class MarksVm
     {
-        public int Id { get; set; }
+        public int Value { get; set; }
 
-        public string Name { get; set; }
-
-        public virtual Grade Grade { get; set; }
+        public virtual Subject Subject { get; set; }
     }
 }

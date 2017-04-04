@@ -13,5 +13,7 @@ namespace SchoolSystem.Models.EntityModels
         public int Value { get; set; }
 
         public virtual Subject Subject { get; set; }
+
+        public virtual Student Student { get; set; }
     }
 }

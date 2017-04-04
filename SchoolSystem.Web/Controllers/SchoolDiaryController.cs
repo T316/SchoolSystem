@@ -28,18 +28,47 @@ namespace SchoolSystem.Web.Controllers
             return View(vms);
         }
 
-        [Route("Subjects/{id}")]
-        public ActionResult Subjects(int id)
+        [Route("Grade/{id}/Subjects")]
+        public ActionResult AllSubjects(int id)
         {
             var vms = this.service.GetAllSubjectsForGrade(id);
             return View(vms);
         }
 
-        [Route("Students/{id}")]
-        public ActionResult Students(int id)
+        [Route("Subject/{id}")]
+        public ActionResult SubjectDetails(int id)
+        {
+            var vm = this.service.GetSubjectDetails(id);
+            return View(vm);
+        }
+
+
+        [Route("Grade/{id}/Students")]
+        public ActionResult AllStudents(int id)
         {
             var vms = this.service.GetAllStudentsForGrade(id);
             return View(vms);
+        }
+
+        [Route("Student/{id}")]
+        public ActionResult StudentDetails(int id)
+        {
+            var vm = this.service.GetStudentDetails(id);
+            return View(vm);
+        }
+
+        [Route("Student/{id}/Notes")]
+        public ActionResult StudentNotes(int id)
+        {
+            var vm = this.service.GetStudentNotes(id);
+            return View(vm);
+        }
+
+        [Route("Student/{id}/Marks")]
+        public ActionResult StudentMarks(int id)
+        {
+            var vm = this.service.GetStudentMarks(id);
+            return View(vm);
         }
     }
 }

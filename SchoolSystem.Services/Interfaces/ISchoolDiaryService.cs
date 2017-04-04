@@ -5,6 +5,14 @@ namespace SchoolSystem.Services.Interfaces
 {
     public interface ISchoolDiaryService
     {
+        SubjectDetailsVm GetSubjectDetails(int id);
+
+        StudentDetailsVm GetStudentDetails(int id);
+
+        NotesForStudentVm GetStudentNotes(int id);
+
+        MarksForStudentVm GetStudentMarks(int id);
+
         IEnumerable<AllGradesVm> GetAllGrades();
 
         IEnumerable<AllSubjectsFromGradeVm> GetAllSubjectsForGrade(int id);

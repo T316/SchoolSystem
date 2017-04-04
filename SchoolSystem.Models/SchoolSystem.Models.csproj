@@ -123,6 +123,13 @@
     <Compile Include="ViewModels\SchoolDiary\AllGradesVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\AllStudentsFromGradeVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\AllSubjectsFromGradeVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\MarksForStudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\MarksVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\NotesForStudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\NotesVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\StudentDetailsVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\StudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\SubjectDetailsVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />

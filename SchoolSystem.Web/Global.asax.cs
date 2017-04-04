@@ -28,7 +28,12 @@ namespace SchoolSystem.Web
             {
                 expression.CreateMap<Grade, AllGradesVm>();
                 expression.CreateMap<Subject, AllSubjectsFromGradeVm>();
+                expression.CreateMap<Subject, SubjectDetailsVm>();
                 expression.CreateMap<Student, AllStudentsFromGradeVm>();
+                expression.CreateMap<Student, StudentDetailsVm>();
+                expression.CreateMap<Student, StudentVm>();
+                expression.CreateMap<Note, NotesVm>();
+                expression.CreateMap<Mark, MarksVm>();
             });
         }
     }

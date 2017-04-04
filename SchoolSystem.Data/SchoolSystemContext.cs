@@ -11,17 +11,17 @@ namespace SchoolSystem.Data
         {
         }
 
-        public DbSet<Teacher> Teacheres { get; set; }
+        public virtual DbSet<Teacher> Teacheres { get; set; }
 
-        public DbSet<Student> Students { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
 
-        public DbSet<Grade> Grades { get; set; }
+        public virtual DbSet<Grade> Grades { get; set; }
 
-        public DbSet<Subject> Subjects { get; set; }
+        public virtual DbSet<Subject> Subjects { get; set; }
 
-        public DbSet<Mark> Marks { get; set; }
+        public virtual DbSet<Mark> Marks { get; set; }
 
-        public DbSet<Note> Notes { get; set; }
+        public virtual DbSet<Note> Notes { get; set; }
 
 
         public static SchoolSystemContext Create()

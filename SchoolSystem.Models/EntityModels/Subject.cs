@@ -13,5 +13,7 @@ namespace SchoolSystem.Models.EntityModels
         public string Name { get; set; }
 
         public virtual Grade Grade { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
     }
 }

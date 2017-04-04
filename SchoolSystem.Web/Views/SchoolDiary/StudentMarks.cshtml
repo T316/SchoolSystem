@@ -1,0 +1,21 @@
+﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.MarksForStudentVm
+
+@{
+    ViewBag.Title = "StudentMarks";
+}
+
+<h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
+
+<table class="table">
+
+@foreach (var item in Model.Marks) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to students", "AllStudents", new { id = Model.Student.Grade.Id })
