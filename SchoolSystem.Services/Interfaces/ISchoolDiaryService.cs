@@ -13,10 +13,12 @@ namespace SchoolSystem.Services.Interfaces
 
         MarksForStudentVm GetStudentMarks(int id);
 
+        StudentAbsencesVm GetStudentAbsences(int id);
+
         IEnumerable<AllGradesVm> GetAllGrades();
 
         IEnumerable<AllSubjectsFromGradeVm> GetAllSubjectsForGrade(int id);
 
-        IEnumerable<AllStudentsFromGradeVm> GetAllStudentsForGrade(int id);
+        IEnumerable<AllStudentsFromGradeVm> GetAllStudentsForGrade(int id);      
     }
 }

@@ -64,21 +64,6 @@
         <dd>
             @Html.DisplayFor(model => model.ParentPhone)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Absences)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Absences)
-            @if (Model.Delays != 0)
-            {
-                <span>
-                    and @Html.DisplayFor(model => model.Delays)/3
-                </span>
-            }
-        </dd>
-
     </dl>
 </div>
 <p>

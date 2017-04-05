@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using SchoolSystem.Models.BindingModels;
+using SchoolSystem.Models.BindingModels.Teacher;
 using SchoolSystem.Models.EntityModels;
 using SchoolSystem.Models.ViewModels.SchoolDiary;
 using System;

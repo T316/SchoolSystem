@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolSystem.Models.EntityModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace SchoolSystem.Models.ViewModels.SchoolDiary
 {
-    public class NotesForStudentVm
+    public class StudentAbsencesVm
     {
-        public StudentVm Student { get; set; }
-
-        public IEnumerable<NotesVm> Notes { get; set; }
+        public Student Student { get; set; }
     }
 }

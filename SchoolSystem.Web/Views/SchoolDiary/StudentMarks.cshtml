@@ -6,6 +6,11 @@
 
 <h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
 
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Add Mark", "AddMark", "Teacher");
+}
+
 <table class="table">
 
 @foreach (var item in Model.Marks) {

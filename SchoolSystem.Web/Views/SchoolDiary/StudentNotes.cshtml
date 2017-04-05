@@ -6,6 +6,11 @@
 
 <h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
 
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Add Note", "AddNote", "Teacher", new { id = Model.Student.Id }, null);
+}
+
 @foreach (var item in Model.Notes) {
 
     <div id="note" class="card">

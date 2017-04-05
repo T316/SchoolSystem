@@ -70,5 +70,13 @@ namespace SchoolSystem.Web.Controllers
             var vm = this.service.GetStudentMarks(id);
             return View(vm);
         }
+
+
+        [Route("Student/{id}/Absences")]
+        public ActionResult StudentAbsences(int id)
+        {
+            var vm = this.service.GetStudentAbsences(id);
+            return View(vm);
+        }
     }
 }

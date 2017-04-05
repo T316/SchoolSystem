@@ -4,6 +4,7 @@ using SchoolSystem.Models.ViewModels.SchoolDiary;
 using SchoolSystem.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace SchoolSystem.Services
 {
@@ -52,7 +53,7 @@ namespace SchoolSystem.Services
         public NotesForStudentVm GetStudentNotes(int id)
         {
             Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);
-            IEnumerable<Note> notes = this.Context.Notes.Where(n => n.Student.Id == id);
+            IEnumerable<Note> notes = this.Context.Notes.Where(n => n.Student.Id == id).OrderByDescending(n => n.Date);
 
             StudentVm studentVm = Mapper.Instance.Map<Student, StudentVm>(student);
             IEnumerable<NotesVm> notesVms = Mapper.Instance.Map<IEnumerable<Note>, IEnumerable<NotesVm>>(notes);
@@ -75,6 +76,15 @@ namespace SchoolSystem.Services
             MarksForStudentVm vm = new MarksForStudentVm();
             vm.Student = studentVm;
             vm.Marks = marksVm;
+
+            return vm;
+        }
+
+        public StudentAbsencesVm GetStudentAbsences(int id)
+        {
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);
+            StudentAbsencesVm vm = new StudentAbsencesVm();
+            vm.Student = student;
 
             return vm;
         }

@@ -4,7 +4,10 @@
     ViewBag.Title = "Subjects";
 }
 
-<h2>Subjects for @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+@if (Model.Any())
+{
+    <h2>Subjects for @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+}
 
 <table class="table">
 

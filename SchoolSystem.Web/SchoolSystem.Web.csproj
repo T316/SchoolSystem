@@ -207,6 +207,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SchoolDiaryController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -292,6 +293,9 @@
     <Content Include="Views\SchoolDiary\StudentDetails.cshtml" />
     <Content Include="Views\SchoolDiary\StudentNotes.cshtml" />
     <Content Include="Views\SchoolDiary\StudentMarks.cshtml" />
+    <Content Include="Views\SchoolDiary\StudentAbsences.cshtml" />
+    <Content Include="Views\Teacher\AddNote.cshtml" />
+    <Content Include="Views\Teacher\AddMark.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />

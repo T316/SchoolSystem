@@ -4,7 +4,10 @@
     ViewBag.Title = "Students";
 }
 
-<h2>Students in @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+@if (Model.Any())
+{
+    <h2>Students in @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+}
 
 <table class="table">
 
@@ -16,7 +19,8 @@
         <td>          
             @Html.ActionLink("Details", "StudentDetails", new { id=item.Id }) |
             @Html.ActionLink("Marks", "StudentMarks", new { id = item.Id }) |
-            @Html.ActionLink("Notes", "StudentNotes", new { id = item.Id })
+            @Html.ActionLink("Notes", "StudentNotes", new { id = item.Id }) |
+            @Html.ActionLink("Absences", "StudentAbsences", new { id = item.Id })
         </td>
     </tr>
 }
