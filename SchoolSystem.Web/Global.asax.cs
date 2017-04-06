@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using SchoolSystem.Models.BindingModels;
-using SchoolSystem.Models.BindingModels.Teacher;
+using SchoolSystem.Models.BindingModels.Teachers;
 using SchoolSystem.Models.EntityModels;
 using SchoolSystem.Models.ViewModels.SchoolDiary;
+using SchoolSystem.Models.ViewModels.Teachers;
 using System;
 using System.Collections.Generic;
 using System.Linq;

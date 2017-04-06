@@ -20,7 +20,11 @@
 {
     @Html.ActionLink("Add Delay", "AddDelay", "Teacher", new { id = Model.Student.Id }, null);
     <br />
+    @Html.ActionLink("Remove Delay", "RemoveDelay", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
     @Html.ActionLink("Add Absence", "AddAbsence", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
+    @Html.ActionLink("Remove Absence", "RemoveAbsence", "Teacher", new { id = Model.Student.Id }, null);
     <br />
 }
 

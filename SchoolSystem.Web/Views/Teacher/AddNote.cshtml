@@ -1,4 +1,4 @@
-﻿@model SchoolSystem.Models.BindingModels.Teacher.AddNoteBm
+﻿@model SchoolSystem.Models.BindingModels.Teachers.AddNoteBm
 
 @{
     ViewBag.Title = "AddNote";
@@ -9,11 +9,11 @@
 @using (Html.BeginForm("AddNote", "Teacher", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Content, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextAreaFor(m => m.Content, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="col-md-10">

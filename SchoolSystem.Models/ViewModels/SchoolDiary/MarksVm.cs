@@ -9,6 +9,8 @@ namespace SchoolSystem.Models.ViewModels.SchoolDiary
 {
     public class MarksVm
     {
+        public int Id { get; set; }
+
         public int Value { get; set; }
 
         public virtual Subject Subject { get; set; }

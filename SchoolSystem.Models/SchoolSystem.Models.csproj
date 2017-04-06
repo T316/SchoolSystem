@@ -95,8 +95,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BindingModels\Theacher\AddMarkBm.cs" />
-    <Compile Include="BindingModels\Theacher\AddNoteBm.cs" />
+    <Compile Include="BindingModels\Theachers\AddMarkBm.cs" />
+    <Compile Include="BindingModels\Theachers\AddNoteBm.cs" />
+    <Compile Include="ViewModels\Teachers\EditMarkVm.cs" />
     <Compile Include="EntityModels\Note.cs" />
     <Compile Include="EntityModels\Teacher.cs" />
     <Compile Include="EntityModels\User.cs" />

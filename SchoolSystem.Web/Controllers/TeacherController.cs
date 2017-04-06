@@ -1,5 +1,6 @@
 ﻿using SchoolSystem.Models.BindingModels;
-using SchoolSystem.Models.BindingModels.Teacher;
+using SchoolSystem.Models.BindingModels.Teachers;
+using SchoolSystem.Models.ViewModels.Teachers;
 using SchoolSystem.Services.Interfaces;
 using SchoolSystem.Web.Attritutes;
 using System;
@@ -28,6 +29,13 @@ namespace SchoolSystem.Web.Controllers
             return RedirectToAction("StudentAbsences", "SchoolDiary", new { id = id });
         }
 
+        [Route("RemoveAbsence/{id}")]
+        public ActionResult RemoveAbsence(int id)
+        {
+            this.service.RemoveAbsence(id);
+            return RedirectToAction("StudentAbsences", "SchoolDiary", new { id = id });
+        }
+
         [Route("AddDelay/{id}")]
         public ActionResult AddDelay(int id)
         {
@@ -35,8 +43,15 @@ namespace SchoolSystem.Web.Controllers
             return RedirectToAction("StudentAbsences", "SchoolDiary", new { id = id });
         }
 
+        [Route("RemoveDelay/{id}")]
+        public ActionResult RemoveDelay(int id)
+        {
+            this.service.RemoveDelay(id);
+            return RedirectToAction("StudentAbsences", "SchoolDiary", new { id = id });
+        }
+
         [Route("AddNote/{id}")]
-        public ActionResult AddNote(int id)
+        public ActionResult AddNote()
         {
             return View();
         }
@@ -45,12 +60,17 @@ namespace SchoolSystem.Web.Controllers
         [Route("AddNote/{id}")]
         public ActionResult AddNote(AddNoteBm bind, int id)
         {
-            this.service.AddNote(bind, id);
-            return RedirectToAction("StudentNotes", "SchoolDiary");
+            if (this.ModelState.IsValid)
+            {
+                this.service.AddNote(bind, id);
+                return RedirectToAction("StudentNotes", "SchoolDiary");
+            }
+
+            return this.View();
         }
 
         [Route("AddMark/{id}")]
-        public ActionResult AddMark(int id)
+        public ActionResult AddMark()
         {
             return View();
         }
@@ -59,8 +79,54 @@ namespace SchoolSystem.Web.Controllers
         [Route("AddMark/{id}")]
         public ActionResult AddMark(AddMarkBm bind, int id)
         {
-            this.service.AddMark(bind, id);
-            return RedirectToAction("StudentMarks", "SchoolDiary");
+            if (!this.service.IsSubjectNameExists(bind))
+            {
+                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
+            }
+
+            if (!this.service.IsStudentExists(id))
+            {
+                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+            }
+
+            if (this.ModelState.IsValid)
+            {
+                this.service.AddMark(bind, id);
+                return RedirectToAction("StudentMarks", "SchoolDiary");
+            }
+
+            return this.View();
+        }
+
+        [Route("EditMark/{id}")]
+        public ActionResult EditMark(int id)
+        {
+            EditMarkVm vm = this.service.GetMarkForEdit(id);
+
+            return this.View(vm);
+        }
+
+        [HttpPost]
+        [Route("EditMark/{id}")]
+        public ActionResult EditMark(EditMarkVm vm, int id)
+        {
+            if (!this.service.IsSubjectNameExists(vm))
+            {
+                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
+            }
+
+            if (!this.service.IsStudentExists(vm.StudentId))
+            {
+                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+            }
+
+            if (this.ModelState.IsValid)
+            {
+                this.service.EditMark(vm, id);
+                return RedirectToAction("StudentMarks", "SchoolDiary", new { id = vm.StudentId });
+            }
+
+            return this.View(vm);
         }
     }
 }
