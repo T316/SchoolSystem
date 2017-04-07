@@ -27,7 +27,9 @@
                     <li>@Html.ActionLink("School Diary", "Grades", "SchoolDiary", new { area = "" }, null)</li>
                     @if (User.IsInRole("Director"))
                     {
-                        <li>@Html.ActionLink("Director Panel", "AllTeachers", "DirectorPanel", new { area = "DirectorPanel" }, null)</li>
+                        <li>
+                            @Html.ActionLink("Director Panel", "AllTeachers", "DirectorPanel", new { area = "DirectorPanel" }, null)
+                        </li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

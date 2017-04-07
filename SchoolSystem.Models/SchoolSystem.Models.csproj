@@ -95,6 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\DirectorPanel\AddTeacherBm.cs" />
     <Compile Include="BindingModels\Theachers\AddMarkBm.cs" />
     <Compile Include="BindingModels\Theachers\AddNoteBm.cs" />
     <Compile Include="ViewModels\DirectorPanel\AllTeachersVm.cs" />

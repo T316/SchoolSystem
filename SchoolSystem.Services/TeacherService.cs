@@ -67,7 +67,7 @@ namespace SchoolSystem.Services
             note.Date = DateTime.Now;
 
             string username = bind.TeacherName;
-            Teacher teacher = this.Context.Teacheres.FirstOrDefault(t => t.User.UserName == username);
+            Teacher teacher = this.Context.Teachers.FirstOrDefault(t => t.User.UserName == username);
             note.Teacher = teacher;
 
             Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);

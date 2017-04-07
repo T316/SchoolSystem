@@ -11,7 +11,7 @@ namespace SchoolSystem.Data
         {
         }
 
-        public virtual DbSet<Teacher> Teacheres { get; set; }
+        public virtual DbSet<Teacher> Teachers { get; set; }
 
         public virtual DbSet<Student> Students { get; set; }
 

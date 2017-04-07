@@ -244,6 +244,7 @@
     <Content Include="Areas\DirectorPanel\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\DirectorPanel\AddTeacher.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
