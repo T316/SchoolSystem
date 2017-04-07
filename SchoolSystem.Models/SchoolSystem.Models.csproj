@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="BindingModels\Theachers\AddMarkBm.cs" />
     <Compile Include="BindingModels\Theachers\AddNoteBm.cs" />
+    <Compile Include="ViewModels\DirectorPanel\AllTeachersVm.cs" />
     <Compile Include="ViewModels\Teachers\EditMarkVm.cs" />
     <Compile Include="EntityModels\Note.cs" />
     <Compile Include="EntityModels\Teacher.cs" />

@@ -2,6 +2,7 @@
 using SchoolSystem.Models.BindingModels;
 using SchoolSystem.Models.BindingModels.Teachers;
 using SchoolSystem.Models.EntityModels;
+using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.ViewModels.SchoolDiary;
 using SchoolSystem.Models.ViewModels.Teachers;
 using System;
@@ -37,6 +38,7 @@ namespace SchoolSystem.Web
                 expression.CreateMap<Student, StudentVm>();
                 expression.CreateMap<Note, NotesVm>();
                 expression.CreateMap<Mark, MarksVm>();
+                expression.CreateMap<Teacher, AllTeachersVm>();
             });
         }
     }

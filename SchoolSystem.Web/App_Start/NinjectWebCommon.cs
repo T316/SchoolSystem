@@ -65,6 +65,7 @@ namespace SchoolSystem.Web.App_Start
         {
             kernel.Bind<ISchoolDiaryService>().To<SchoolDiaryService>();
             kernel.Bind<ITeacherService>().To<TeacherService>();
+            kernel.Bind<IDirectorPanelService>().To<DirectorPanelService>();
         }        
     }
 }

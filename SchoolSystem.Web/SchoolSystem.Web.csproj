@@ -202,6 +202,8 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\DirectorPanel\Controllers\DirectorPanelController.cs" />
+    <Compile Include="Areas\DirectorPanel\DirectorPanelAreaRegistration.cs" />
     <Compile Include="Attritutes\MyAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -234,6 +236,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\DirectorPanel\Views\web.config" />
+    <Content Include="Areas\DirectorPanel\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\DirectorPanel\AllTeachers.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\Unauthorize.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -261,7 +271,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -297,6 +306,7 @@
     <Content Include="Views\Teacher\AddNote.cshtml" />
     <Content Include="Views\Teacher\AddMark.cshtml" />
     <Content Include="Views\Teacher\EditMark.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />

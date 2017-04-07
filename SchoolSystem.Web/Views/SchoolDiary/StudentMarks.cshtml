@@ -19,7 +19,10 @@
             @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
         </td>
         <td>
-            @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id}, null)
+            @if (User.IsInRole("Teacher"))
+            {
+                @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id }, null)
+            }
         </td>
     </tr>
 }

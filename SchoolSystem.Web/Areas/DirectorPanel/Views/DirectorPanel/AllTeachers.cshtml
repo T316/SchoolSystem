@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SchoolSystem.Models.ViewModels.DirectorPanel.AllTeachersVm>
+
+@{
+    ViewBag.Title = "AllTeachers";
+}
+
+<h3>All Teachers:</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            Name
+        </th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Name)
+        </td>
+    </tr>
+}
+
+</table>

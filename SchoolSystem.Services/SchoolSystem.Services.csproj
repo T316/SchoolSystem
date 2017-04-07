@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectorPanelService.cs" />
+    <Compile Include="Interfaces\IDirectorPanelService.cs" />
     <Compile Include="Interfaces\ISchoolDiaryService.cs" />
     <Compile Include="Interfaces\ITeacherService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

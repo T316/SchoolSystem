@@ -10,8 +10,6 @@ namespace SchoolSystem.Models.EntityModels
     {
         public string Name { get; set; }
 
-        public DateTime? BirthDate { get; set; }
-
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

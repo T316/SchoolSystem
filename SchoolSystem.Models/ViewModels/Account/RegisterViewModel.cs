@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SchoolSystem.Models.ViewModels.Account
 {
@@ -7,17 +8,18 @@ namespace SchoolSystem.Models.ViewModels.Account
     {
         [Required]
         [EmailAddress]
+        [Index("EmailIndex", IsUnique = true)]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
+        [Index("UserNameIndex", IsUnique = true)]
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        [Display(Name = "Birth Date")]
-        public DateTime? BirthDate { get; set; }
+        [Display(Name = "Name")]
+        public string Name { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
