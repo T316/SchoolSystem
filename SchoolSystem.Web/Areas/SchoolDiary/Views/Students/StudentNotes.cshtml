@@ -1,0 +1,29 @@
+﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.NotesForStudentVm
+
+@{
+    ViewBag.Title = "StudentNotes";
+}
+
+<h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
+
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Add Note", "AddNote", "Teacher", new { id = Model.Student.Id }, null);
+}
+
+@foreach (var item in Model.Notes) {
+
+    <div id="note" class="card">
+        <div class="card-block">
+            <h4 class="card-text">@Html.DisplayFor(modelItem => item.Content)</h4>
+            <br />
+            <span>@Html.DisplayFor(modelItem => item.Teacher.User.Name)</span>
+            <br />
+            <span>Date: @Html.DisplayFor(modelItem => item.Date)</span>
+        </div>
+    </div>
+    <br />
+
+}
+
+@Html.ActionLink("Back to students", "All", new { id = Model.Student.Grade.Id })

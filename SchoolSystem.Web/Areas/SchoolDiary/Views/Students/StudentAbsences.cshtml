@@ -1,0 +1,31 @@
+﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.StudentAbsencesVm
+
+@{
+    ViewBag.Title = "StudentAbsences";
+}
+
+<h2>@Model.Student.Name</h2>
+
+@Html.DisplayNameFor(model => model.Student.Absences)
+@Html.DisplayFor(model => model.Student.Absences)
+@if (Model.Student.Delays != 0)
+{
+    <span>
+        and @Html.DisplayFor(model => model.Student.Delays)/3
+    </span>
+}
+<br />
+
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Add Delay", "AddDelay", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
+    @Html.ActionLink("Remove Delay", "RemoveDelay", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
+    @Html.ActionLink("Add Absence", "AddAbsence", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
+    @Html.ActionLink("Remove Absence", "RemoveAbsence", "Teacher", new { id = Model.Student.Id }, null);
+    <br />
+}
+
+@Html.ActionLink("Back to students", "All", new { id = Model.Student.Grade.Id })

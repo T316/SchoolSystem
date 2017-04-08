@@ -1,0 +1,32 @@
+﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.MarksForStudentVm
+
+@{
+    ViewBag.Title = "StudentMarks";
+}
+
+<h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
+
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Add Mark", "AddMark", "Teacher");
+}
+
+<table class="table">
+
+@foreach (var item in Model.Marks) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @if (User.IsInRole("Teacher"))
+            {
+                @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id }, null)
+            }
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to students", "All", new { id = Model.Student.Grade.Id })

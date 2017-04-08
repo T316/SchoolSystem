@@ -1,0 +1,29 @@
+﻿@model SchoolSystem.Models.BindingModels.SchoolDiary.Teachers.AddNoteBm
+
+@{
+    ViewBag.Title = "AddNote";
+}
+
+<h2>Add Note</h2>
+
+@using (Html.BeginForm("AddNote", "Teacher", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(m => m.Content, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Content, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.TeacherName, new { @class = "form-control hidden", Value = User.Identity.Name })
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Add note" />
+        </div>
+    </div>
+}
+
+@Html.ActionLink("Go back", "StudentNotes", "Students")

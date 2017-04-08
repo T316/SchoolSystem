@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SchoolSystem.Models.ViewModels.SchoolDiary.Subjects.AllSubjectsFromGradeVm>
+
+@{
+    ViewBag.Title = "Subjects";
+}
+
+@if (Model.Any())
+{
+    <h2>Subjects for @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+}
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to grades", "All", "Grades")

@@ -52,14 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DirectorPanelService.cs" />
-    <Compile Include="Interfaces\IDirectorPanelService.cs" />
-    <Compile Include="Interfaces\ISchoolDiaryService.cs" />
-    <Compile Include="Interfaces\ITeacherService.cs" />
+    <Compile Include="Interfaces\SchoolDiary\IGradesService.cs" />
+    <Compile Include="Interfaces\SchoolDiary\IStudentsService.cs" />
+    <Compile Include="Interfaces\SchoolDiary\ISubjectsService.cs" />
+    <Compile Include="SchoolDiary\GradesService.cs" />
+    <Compile Include="SchoolDiary\StudentsService.cs" />
+    <Compile Include="SchoolDiary\SubjectsService.cs" />
+    <Compile Include="DirectorPanel\TeachersService.cs" />
+    <Compile Include="Interfaces\DirectorPanel\ITeachersService.cs" />
+    <Compile Include="Interfaces\SchoolDiary\ITeacherService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolDiaryService.cs" />
     <Compile Include="Service.cs" />
-    <Compile Include="TeacherService.cs" />
+    <Compile Include="SchoolDiary\TeacherService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SchoolSystem.Data\SchoolSystem.Data.csproj">
@@ -75,5 +79,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

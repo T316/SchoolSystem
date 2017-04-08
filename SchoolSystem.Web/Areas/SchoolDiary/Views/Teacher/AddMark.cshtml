@@ -1,0 +1,33 @@
+﻿@model SchoolSystem.Models.BindingModels.SchoolDiary.Teachers.AddMarkBm
+
+@{
+    ViewBag.Title = "AddMark";
+}
+
+<h2>Add Mark</h2>
+
+@using (Html.BeginForm("AddMark", "Teacher", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(m => m.Value, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Value, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.SubjectName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.SubjectName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SubjectName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Add mark" />
+        </div>
+    </div>
+}
+
+@Html.ActionLink("Go back", "StudentMarks", "Students")

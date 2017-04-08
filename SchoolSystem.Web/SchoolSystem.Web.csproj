@@ -202,14 +202,17 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\DirectorPanel\Controllers\DirectorPanelController.cs" />
+    <Compile Include="Areas\DirectorPanel\Controllers\TeachersController.cs" />
     <Compile Include="Areas\DirectorPanel\DirectorPanelAreaRegistration.cs" />
+    <Compile Include="Areas\SchoolDiary\Controllers\GradesController.cs" />
+    <Compile Include="Areas\SchoolDiary\Controllers\StudentsController.cs" />
+    <Compile Include="Areas\SchoolDiary\Controllers\SubjectsController.cs" />
+    <Compile Include="Areas\SchoolDiary\SchoolDiaryAreaRegistration.cs" />
     <Compile Include="Attritutes\MyAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\SchoolDiaryController.cs" />
-    <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Areas\SchoolDiary\Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -238,13 +241,20 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Areas\DirectorPanel\Views\web.config" />
     <Content Include="Areas\DirectorPanel\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\DirectorPanel\Views\DirectorPanel\AllTeachers.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Teachers\All.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\Unauthorize.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\Error.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\DirectorPanel\Views\DirectorPanel\AddTeacher.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Teachers\Add.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\web.config" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\Unauthorize.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\_LoginPartial.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -294,20 +304,20 @@
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Unauthorize.cshtml" />
-    <Content Include="Views\SchoolDiary\Grades.cshtml" />
-    <Content Include="Views\SchoolDiary\AllSubjects.cshtml" />
-    <Content Include="Views\SchoolDiary\AllStudents.cshtml" />
-    <Content Include="Views\SchoolDiary\SubjectDetails.cshtml" />
-    <Content Include="Views\SchoolDiary\StudentDetails.cshtml" />
-    <Content Include="Views\SchoolDiary\StudentNotes.cshtml" />
-    <Content Include="Views\SchoolDiary\StudentMarks.cshtml" />
-    <Content Include="Views\SchoolDiary\StudentAbsences.cshtml" />
-    <Content Include="Views\Teacher\AddNote.cshtml" />
-    <Content Include="Views\Teacher\AddMark.cshtml" />
-    <Content Include="Views\Teacher\EditMark.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Grades\All.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Subjects\All.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Students\All.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Subjects\SubjectDetails.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Students\StudentDetails.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Students\StudentNotes.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Students\StudentMarks.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Students\StudentAbsences.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Teacher\AddNote.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Teacher\AddMark.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Teacher\EditMark.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />

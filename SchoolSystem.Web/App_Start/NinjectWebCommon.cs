@@ -63,9 +63,11 @@ namespace SchoolSystem.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<ISchoolDiaryService>().To<SchoolDiaryService>();
             kernel.Bind<ITeacherService>().To<TeacherService>();
-            kernel.Bind<IDirectorPanelService>().To<DirectorPanelService>();
+            kernel.Bind<ITeachersService>().To<TeachersService>();
+            kernel.Bind<IGradesService>().To<GradesService>();
+            kernel.Bind<IStudentsService>().To<StudentsService>();
+            kernel.Bind<ISubjectsService>().To<SubjectsService>();
         }        
     }
 }

@@ -20,5 +20,8 @@ namespace SchoolSystem.Models.EntityModels
 
         [Required]
         public virtual Student Student { get; set; }
+
+        [Required]
+        public DateTime Date { get; set; }
     }
 }

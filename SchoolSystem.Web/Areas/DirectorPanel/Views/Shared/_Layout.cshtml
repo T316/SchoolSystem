@@ -24,11 +24,19 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("School Diary", "Grades", "SchoolDiary", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("School Diary", "All", "Grades", new { area = "SchoolDiary" }, null)</li>
                     @if (User.IsInRole("Director"))
                     {
-                        <li>
-                            @Html.ActionLink("Director Panel", "AllTeachers", "DirectorPanel", new { area = "DirectorPanel" }, null)
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Director Panel
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("Teachers", "All", "Teachers", new { area = "DirectorPanel" }, null)
+                                </li>
+                            </ul>
                         </li>
                     }
                 </ul>

@@ -95,11 +95,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BindingModels\DirectorPanel\AddTeacherBm.cs" />
-    <Compile Include="BindingModels\Theachers\AddMarkBm.cs" />
-    <Compile Include="BindingModels\Theachers\AddNoteBm.cs" />
-    <Compile Include="ViewModels\DirectorPanel\AllTeachersVm.cs" />
-    <Compile Include="ViewModels\Teachers\EditMarkVm.cs" />
+    <Compile Include="BindingModels\DirectorPanel\Teachers\AddTeacherBm.cs" />
+    <Compile Include="BindingModels\SchoolDiary\Teachers\AddMarkBm.cs" />
+    <Compile Include="BindingModels\SchoolDiary\Teachers\AddNoteBm.cs" />
+    <Compile Include="ViewModels\DirectorPanel\Teachers\AllTeachersVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Teachers\EditMarkVm.cs" />
     <Compile Include="EntityModels\Note.cs" />
     <Compile Include="EntityModels\Teacher.cs" />
     <Compile Include="EntityModels\User.cs" />
@@ -125,17 +125,17 @@
     <Compile Include="ViewModels\Manage\ManageLoginsViewModel.cs" />
     <Compile Include="ViewModels\Manage\SetPasswordViewModel.cs" />
     <Compile Include="ViewModels\Manage\VerifyPhoneNumberViewModel.cs" />
-    <Compile Include="ViewModels\SchoolDiary\AllGradesVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\AllStudentsFromGradeVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\AllSubjectsFromGradeVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\MarksForStudentVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\MarksVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\NotesForStudentVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\NotesVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\StudentAbsencesVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\StudentDetailsVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\StudentVm.cs" />
-    <Compile Include="ViewModels\SchoolDiary\SubjectDetailsVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Grades\AllGradesVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\AllStudentsFromGradeVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Subjects\AllSubjectsFromGradeVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\MarksForStudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\MarksVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\NotesForStudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\NotesVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\StudentAbsencesVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\StudentDetailsVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Students\StudentVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Subjects\SubjectDetailsVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />

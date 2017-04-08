@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using SchoolSystem.Models.BindingModels;
-using SchoolSystem.Models.BindingModels.Teachers;
 using SchoolSystem.Models.EntityModels;
 using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.ViewModels.SchoolDiary;
-using SchoolSystem.Models.ViewModels.Teachers;
+using SchoolSystem.Models.ViewModels.SchoolDiary.Grades;
+using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
+using SchoolSystem.Models.ViewModels.SchoolDiary.Subjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
