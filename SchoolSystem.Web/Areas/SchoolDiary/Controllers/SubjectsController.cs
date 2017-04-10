@@ -1,5 +1,6 @@
 ﻿using SchoolSystem.Services;
 using SchoolSystem.Services.Interfaces;
+using SchoolSystem.Services.Interfaces.SchoolDiary;
 using SchoolSystem.Web.Attritutes;
 using System;
 using System.Collections.Generic;

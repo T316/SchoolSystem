@@ -12,6 +12,10 @@ namespace SchoolSystem.Web.App_Start
     using Ninject.Web.Common;
     using SchoolSystem.Services.Interfaces;
     using SchoolSystem.Services;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Services.SchoolDiary;
+    using SchoolSystem.Services.Interfaces.DirectorPanel;
+    using SchoolSystem.Services.DirectorPanel;
 
     public static class NinjectWebCommon 
     {
@@ -64,10 +68,13 @@ namespace SchoolSystem.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ITeacherService>().To<TeacherService>();
-            kernel.Bind<ITeachersService>().To<TeachersService>();
             kernel.Bind<IGradesService>().To<GradesService>();
             kernel.Bind<IStudentsService>().To<StudentsService>();
             kernel.Bind<ISubjectsService>().To<SubjectsService>();
+            kernel.Bind<IDirectorTeachersService>().To<DirectorTeachersService>();
+            kernel.Bind<IDirectorGradesService>().To<DirectorGradesService>();
+            kernel.Bind<IDirectorStudentsService>().To<DirectorStudentsService>();
+            kernel.Bind<IDirectorSubjectsService>().To<DirectorSubjectsService>();
         }        
     }
 }

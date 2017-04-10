@@ -13,8 +13,9 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
+using SchoolSystem.Services.Interfaces.SchoolDiary;
 
-namespace SchoolSystem.Services
+namespace SchoolSystem.Services.SchoolDiary
 {
     public class TeacherService : Service, ITeacherService
     {
@@ -93,6 +94,20 @@ namespace SchoolSystem.Services
             this.Context.SaveChanges();
         }
 
+        public void EditStudentInfo(EditStudentInfoVm vm)
+        {
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == vm.Id);
+            student.Name = vm.Name;
+            student.PersonalNumber = vm.PersonalNumber;
+            student.Address = vm.Address;
+            student.PhoneNumber = vm.PhoneNumber;
+            student.ParentName = vm.ParentName;
+            student.ParentPhone = vm.ParentPhone;
+
+            this.Context.Entry(student).State = EntityState.Modified;
+            this.Context.SaveChanges();
+        }
+
         public MarkVm GetMarkForEdit(int id)
         {
             Mark mark = this.Context.Marks.FirstOrDefault(m => m.Id == id);
@@ -112,6 +127,14 @@ namespace SchoolSystem.Services
             vm.StudentId = id;
             vm.Value = 6;
             vm.SubjectName = student.Grade.Subjects.Select(s => s.Name).FirstOrDefault(s => s != null);
+
+            return vm;
+        }
+
+        public EditStudentInfoVm GetStudentInfoById(int id)
+        {
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);
+            EditStudentInfoVm vm = Mapper.Instance.Map<Student, EditStudentInfoVm>(student);
 
             return vm;
         }

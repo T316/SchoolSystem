@@ -6,8 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Subjects;
+using SchoolSystem.Services.Interfaces.SchoolDiary;
 
-namespace SchoolSystem.Services
+namespace SchoolSystem.Services.SchoolDiary
 {
     public class SubjectsService : Service, ISubjectsService
     {

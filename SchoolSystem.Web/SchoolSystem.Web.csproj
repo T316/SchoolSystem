@@ -202,6 +202,9 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\DirectorPanel\Controllers\GradesController.cs" />
+    <Compile Include="Areas\DirectorPanel\Controllers\StudentsController.cs" />
+    <Compile Include="Areas\DirectorPanel\Controllers\SubjectsController.cs" />
     <Compile Include="Areas\DirectorPanel\Controllers\TeachersController.cs" />
     <Compile Include="Areas\DirectorPanel\DirectorPanelAreaRegistration.cs" />
     <Compile Include="Areas\SchoolDiary\Controllers\GradesController.cs" />
@@ -252,9 +255,13 @@
     <Content Include="Areas\SchoolDiary\Views\Shared\Unauthorize.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Shared\Error.cshtml" />
-    <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\_ViewStart.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Teacher\EditStudentInfo.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Grades\All.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Students\All.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Subjects\All.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -316,8 +323,8 @@
     <Content Include="Areas\SchoolDiary\Views\Teacher\AddNote.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Teacher\AddMark.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Teacher\EditMark.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />

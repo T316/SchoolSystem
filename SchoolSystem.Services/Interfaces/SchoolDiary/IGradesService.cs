@@ -2,7 +2,7 @@
 using SchoolSystem.Models.ViewModels.SchoolDiary;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Grades;
 
-namespace SchoolSystem.Services.Interfaces
+namespace SchoolSystem.Services.Interfaces.SchoolDiary
 {
     public interface IGradesService
     {

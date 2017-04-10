@@ -6,6 +6,11 @@
 
 <h2>Student Details</h2>
 
+@if (User.IsInRole("Teacher"))
+{
+    @Html.ActionLink("Edit Student Info", "EditStudentInfo", "Teacher", new { id = Model.Id }, null);
+}
+
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -22,15 +27,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Grade.Value)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Grade.Class)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Grade.Class)
+            @Html.DisplayFor(model => model.Grade.Value)@Html.DisplayFor(model => model.Grade.Class)
         </dd>
 
         <dt>

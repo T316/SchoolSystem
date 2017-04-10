@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
 
-namespace SchoolSystem.Services.Interfaces
+namespace SchoolSystem.Services.Interfaces.SchoolDiary
 {
     public interface ITeacherService
     {
@@ -24,6 +24,10 @@ namespace SchoolSystem.Services.Interfaces
 
         void AddMark(MarkVm vm);
 
+        void EditMark(MarkVm vm, int id);
+
+        void EditStudentInfo(EditStudentInfoVm vm);
+
         bool IsSubjectNameExists(MarkVm vm);
 
         bool IsStudentExists(int id);
@@ -32,6 +36,6 @@ namespace SchoolSystem.Services.Interfaces
 
         MarkVm GetStudentForAddMark(int id);
 
-        void EditMark(MarkVm vm, int id);
+        EditStudentInfoVm GetStudentInfoById(int id);
     }
 }

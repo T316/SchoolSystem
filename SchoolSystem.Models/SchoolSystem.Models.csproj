@@ -97,7 +97,9 @@
   <ItemGroup>
     <Compile Include="BindingModels\DirectorPanel\Teachers\AddTeacherBm.cs" />
     <Compile Include="BindingModels\SchoolDiary\Teachers\AddNoteBm.cs" />
-    <Compile Include="ViewModels\DirectorPanel\Teachers\AllTeachersVm.cs" />
+    <Compile Include="ViewModels\DirectorPanel\DirectorGradeVm.cs" />
+    <Compile Include="ViewModels\DirectorPanel\Grades\DirectorAllGradesVm.cs" />
+    <Compile Include="ViewModels\DirectorPanel\Teachers\DirectorAllTeachersVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\Teachers\EditMarkVm.cs" />
     <Compile Include="EntityModels\Note.cs" />
     <Compile Include="EntityModels\Teacher.cs" />
@@ -135,6 +137,7 @@
     <Compile Include="ViewModels\SchoolDiary\Students\StudentDetailsVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\Students\StudentVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\Subjects\SubjectDetailsVm.cs" />
+    <Compile Include="ViewModels\SchoolDiary\Teachers\EditStudentInfoVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />

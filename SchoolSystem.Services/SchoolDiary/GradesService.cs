@@ -6,14 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Grades;
+using SchoolSystem.Services.Interfaces.SchoolDiary;
 
-namespace SchoolSystem.Services
+namespace SchoolSystem.Services.SchoolDiary
 {
     public class GradesService : Service, IGradesService
     {
         public IEnumerable<AllGradesVm> GetAllGrades()
         {
-            IEnumerable<Grade> allGrades = this.Context.Grades;
+            IEnumerable<Grade> allGrades = this.Context.Grades.OrderBy(g => g.Value).ThenBy(g => g.Class);
             IEnumerable<AllGradesVm> vms = Mapper.Instance.Map<IEnumerable<Grade>, IEnumerable<AllGradesVm>>(allGrades);
 
             return vms;

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SchoolSystem.Models.ViewModels.DirectorPanel.DirectorGradeVm>
+
+@{
+    ViewBag.Title = "All";
+}
+
+<h3>All Subjects</h3>
+
+@foreach (var grade in Model)
+{
+    <h4>
+        @Html.DisplayFor(modelItem => grade.Value)@Html.DisplayFor(modelItem => grade.Class)
+    </h4>
+        <table class="table">
+            @foreach (var subject in grade.Subjects)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => subject.Name)
+                </td>
+            </tr>
+            }
+        </table>
+}

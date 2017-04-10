@@ -4,6 +4,7 @@ using SchoolSystem.Data;
 using SchoolSystem.Models.BindingModels.DirectorPanel;
 using SchoolSystem.Models.BindingModels.DirectorPanel.Teachers;
 using SchoolSystem.Services.Interfaces;
+using SchoolSystem.Services.Interfaces.DirectorPanel;
 using SchoolSystem.Web.Attritutes;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,11 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
     [RoutePrefix("Teachers")]
     public class TeachersController : Controller
     {
-        private ITeachersService service;
+        private IDirectorTeachersService service;
         private SchoolSystemContext context;
         private ApplicationUserManager _userManager;
 
-        public TeachersController(ITeachersService service)
+        public TeachersController(IDirectorTeachersService service)
         {
             this.context = new SchoolSystemContext();
             this.service = service;
