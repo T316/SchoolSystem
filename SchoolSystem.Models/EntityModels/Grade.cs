@@ -18,6 +18,8 @@ namespace SchoolSystem.Models.EntityModels
 
         public int Value { get; set; }
 
+        public string Class { get; set; }
+
         public virtual ICollection<Student> Students { get; set; }
 
         public virtual ICollection<Subject> Subjects { get; set; }

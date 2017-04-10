@@ -8,7 +8,7 @@
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Mark", "AddMark", "Teacher");
+    @Html.ActionLink("Add Mark", "AddMark", "Teacher", new { id = Model.Student.Id }, null);
 }
 
 <table class="table">

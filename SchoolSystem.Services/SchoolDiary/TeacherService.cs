@@ -44,17 +44,17 @@ namespace SchoolSystem.Services
             this.Context.SaveChanges();
         }
 
-        public void AddMark(AddMarkBm bind, int id)
+        public void AddMark(MarkVm vm)
         {
             Mark mark = new Mark();
-            mark.Date = DateTime.Now;
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == vm.StudentId);
+            Subject subject = this.Context.Subjects.FirstOrDefault(s => s.Name == vm.SubjectName);
 
-            Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);
-            mark.Student = student;
-
-            Subject subject = this.Context.Subjects.FirstOrDefault(s => s.Name == bind.SubjectName);
+            mark.Id = vm.Id;
             mark.Subject = subject;
-            mark.Value = bind.Value;
+            mark.Value = vm.Value;
+            mark.Student = student;
+            mark.Date = DateTime.Now;
 
             this.Context.Marks.Add(mark);
             this.Context.SaveChanges();
@@ -78,7 +78,7 @@ namespace SchoolSystem.Services
             this.Context.SaveChanges();
         }
 
-        public void EditMark(EditMarkVm vm, int id)
+        public void EditMark(MarkVm vm, int id)
         {
             Mark mark = this.Context.Marks.FirstOrDefault(m => m.Id == id);
             Student student = this.Context.Students.FirstOrDefault(s => s.Id == vm.StudentId);
@@ -93,14 +93,25 @@ namespace SchoolSystem.Services
             this.Context.SaveChanges();
         }
 
-        public EditMarkVm GetMarkForEdit(int id)
+        public MarkVm GetMarkForEdit(int id)
         {
             Mark mark = this.Context.Marks.FirstOrDefault(m => m.Id == id);
-            EditMarkVm vm = new EditMarkVm();
+            MarkVm vm = new MarkVm();
             vm.Id = id;
             vm.Value = mark.Value;
             vm.SubjectName = mark.Subject.Name;
             vm.StudentId = mark.Student.Id;
+
+            return vm;
+        }
+
+        public MarkVm GetStudentForAddMark(int id)
+        {
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);
+            MarkVm vm = new MarkVm();
+            vm.StudentId = id;
+            vm.Value = 6;
+            vm.SubjectName = student.Grade.Subjects.Select(s => s.Name).FirstOrDefault(s => s != null);
 
             return vm;
         }
@@ -116,30 +127,15 @@ namespace SchoolSystem.Services
             return true;
         }
 
-        public bool IsSubjectNameExists(AddMarkBm bind)
-        {
-            if (bind.SubjectName == null)
-            {
-                return true;
-            }
-
-            Subject subject = this.Context.Subjects.FirstOrDefault(s => s.Name == bind.SubjectName);
-            if (subject == null)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public bool IsSubjectNameExists(EditMarkVm vm)
+        public bool IsSubjectNameExists(MarkVm vm)
         {
             if (vm.SubjectName == null)
             {
                 return true;
             }
 
-            Subject subject = this.Context.Subjects.FirstOrDefault(s => s.Name == vm.SubjectName);
+            Student student = this.Context.Students.FirstOrDefault(s => s.Id == vm.StudentId);
+            Subject subject = student.Grade.Subjects.FirstOrDefault(s => s.Name == vm.SubjectName);
             if (subject == null)
             {
                 return false;

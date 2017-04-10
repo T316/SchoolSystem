@@ -6,7 +6,7 @@
 
 @if (Model.Any())
 {
-    <h2>Students in @Html.DisplayFor(model => Model.First().Grade.Value) grade</h2>
+    <h2>Students in @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
 }
 
 <table class="table">

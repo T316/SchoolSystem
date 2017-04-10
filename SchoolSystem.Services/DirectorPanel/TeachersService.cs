@@ -8,6 +8,7 @@ using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.EntityModels;
 using AutoMapper;
 using SchoolSystem.Models.BindingModels.DirectorPanel;
+using System.Data.Entity;
 
 namespace SchoolSystem.Services
 {
@@ -53,6 +54,14 @@ namespace SchoolSystem.Services
         public void RemoveTeacher(int id)
         {
             Teacher teacher = this.Context.Teachers.FirstOrDefault(t => t.Id == id);
+
+            var subjects = this.Context.Subjects.Where(s => s.Teacher.Id == teacher.Id);
+            foreach (var subject in subjects)
+            {
+                subject.Teacher = null;
+                this.Context.Entry(subject).State = EntityState.Modified;
+            }     
+            this.Context.SaveChanges();
 
             this.Context.Teachers.Remove(teacher);
             this.Context.SaveChanges();

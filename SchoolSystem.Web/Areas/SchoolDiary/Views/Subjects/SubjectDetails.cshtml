@@ -14,16 +14,19 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name) for @Html.DisplayFor(model => model.Grade.Value) grade
+            @Html.DisplayFor(model => model.Name) for @Html.DisplayFor(model => model.Grade.Value)@Html.DisplayFor(model => Model.Grade.Class) grade
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Teacher)
-        </dt>
+        @if (@Model.Teacher != null)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Teacher)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Teacher.User.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Teacher.User.Name)
+            </dd>
+        }
 
     </dl>
 </div>

@@ -48,7 +48,6 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             return View(vm);
         }
 
-
         [Route("Student/{id}/Absences")]
         public ActionResult StudentAbsences(int id)
         {

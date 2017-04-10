@@ -69,55 +69,57 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             return this.View();
         }
 
-        [Route("AddMark/{id}")]
-        public ActionResult AddMark()
+        [Route("Student/{id}/AddMark")]
+        public ActionResult AddMark(int id)
         {
-            return View();
+            var vm = this.service.GetStudentForAddMark(id);
+
+            return View(vm);
         }
 
         [HttpPost]
-        [Route("AddMark/{id}")]
-        public ActionResult AddMark(AddMarkBm bind, int id)
+        [Route("Student/{id}/AddMark")]
+        public ActionResult AddMark(MarkVm vm)
         {
-            if (!this.service.IsSubjectNameExists(bind))
-            {
-                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
-            }
-
-            if (!this.service.IsStudentExists(id))
+            if (!this.service.IsStudentExists(vm.StudentId))
             {
                 this.ModelState.AddModelError("Student", "Student must exist in School diary");
             }
 
-            if (this.ModelState.IsValid)
+            else if (!this.service.IsSubjectNameExists(vm))
             {
-                this.service.AddMark(bind, id);
-                return RedirectToAction("StudentMarks", "Students");
+                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
             }
 
-            return this.View();
+            if (this.ModelState.IsValid)
+            {
+                this.service.AddMark(vm);
+                return RedirectToAction("StudentMarks", "Students", new { id = vm.StudentId });
+            }
+
+            return this.View(vm);
         }
 
         [Route("EditMark/{id}")]
         public ActionResult EditMark(int id)
         {
-            EditMarkVm vm = this.service.GetMarkForEdit(id);
+            MarkVm vm = this.service.GetMarkForEdit(id);
 
             return this.View(vm);
         }
 
         [HttpPost]
         [Route("EditMark/{id}")]
-        public ActionResult EditMark(EditMarkVm vm, int id)
+        public ActionResult EditMark(MarkVm vm, int id)
         {
-            if (!this.service.IsSubjectNameExists(vm))
-            {
-                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
-            }
-
             if (!this.service.IsStudentExists(vm.StudentId))
             {
                 this.ModelState.AddModelError("Student", "Student must exist in School diary");
+            }
+
+            else if (!this.service.IsSubjectNameExists(vm))
+            {
+                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
             }
 
             if (this.ModelState.IsValid)

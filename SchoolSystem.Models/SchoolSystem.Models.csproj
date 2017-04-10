@@ -96,7 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindingModels\DirectorPanel\Teachers\AddTeacherBm.cs" />
-    <Compile Include="BindingModels\SchoolDiary\Teachers\AddMarkBm.cs" />
     <Compile Include="BindingModels\SchoolDiary\Teachers\AddNoteBm.cs" />
     <Compile Include="ViewModels\DirectorPanel\Teachers\AllTeachersVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\Teachers\EditMarkVm.cs" />

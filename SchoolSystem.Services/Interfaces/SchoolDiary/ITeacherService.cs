@@ -22,16 +22,16 @@ namespace SchoolSystem.Services.Interfaces
 
         void AddNote(AddNoteBm bind, int id);
 
-        void AddMark(AddMarkBm bind, int id);
+        void AddMark(MarkVm vm);
 
-        bool IsSubjectNameExists(AddMarkBm bind);
-
-        bool IsSubjectNameExists(EditMarkVm vm);
+        bool IsSubjectNameExists(MarkVm vm);
 
         bool IsStudentExists(int id);
 
-        EditMarkVm GetMarkForEdit(int id);
+        MarkVm GetMarkForEdit(int id);
 
-        void EditMark(EditMarkVm vm, int id);
+        MarkVm GetStudentForAddMark(int id);
+
+        void EditMark(MarkVm vm, int id);
     }
 }
