@@ -28,3 +28,28 @@ textarea {
     padding: 5px;
     text-align: center;
 }
+
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: none;
+}
+
+.table{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.btn {
+    border: 2px solid;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+
+.all-grades-btn{
+    width: 50%;
+}
+
+.go-back-btn{
+    width: 10%;
+}

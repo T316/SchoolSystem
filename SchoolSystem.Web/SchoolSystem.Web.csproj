@@ -249,7 +249,6 @@
     <Content Include="Areas\DirectorPanel\Views\Shared\Error.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Areas\DirectorPanel\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Teachers\Add.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\web.config" />
     <Content Include="Areas\SchoolDiary\Views\Shared\Unauthorize.cshtml" />
@@ -259,7 +258,6 @@
     <Content Include="Areas\SchoolDiary\Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Areas\SchoolDiary\Views\Teacher\EditStudentInfo.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Grades\All.cshtml" />
-    <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Students\All.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Subjects\All.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Grades\Add.cshtml" />
@@ -267,6 +265,8 @@
     <Content Include="Areas\DirectorPanel\Views\Students\Add.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Subjects\AddTeacher.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Subjects\EditTeacher.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

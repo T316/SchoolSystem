@@ -6,7 +6,7 @@
 
 @if (Model.Any())
 {
-    <h2>Subjects for @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
+    <h2 class="text-center">Subjects for @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
 }
 
 <table class="table">
@@ -14,14 +14,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            <h4 class="text-center">
+                @Html.DisplayFor(modelItem => item.Name)
+            </h4>
         </td>
         <td>
-            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id })
+            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-warning" })
         </td>
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Back to grades", "All", "Grades")
+@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-default go-back-btn" })
