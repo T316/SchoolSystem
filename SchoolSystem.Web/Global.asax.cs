@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using SchoolSystem.Models.BindingModels;
+using SchoolSystem.Models.BindingModels.DirectorPanel.Students;
+using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
 using SchoolSystem.Models.EntityModels;
 using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.ViewModels.DirectorPanel.Grades;
@@ -45,6 +47,12 @@ namespace SchoolSystem.Web
                 expression.CreateMap<Mark, MarksVm>();
                 expression.CreateMap<Teacher, DirectorAllTeachersVm>();
                 expression.CreateMap<Student, EditStudentInfoVm>();
+                expression.CreateMap<DirectorGradeVm, Grade>();
+                expression.CreateMap<SubjectsBm, Subject>();
+                expression.CreateMap<StudentBm, Student>();
+                expression.CreateMap<Teacher, TeacherBm>()
+                    .ForMember(emp => emp.UserName,
+                    map => map.MapFrom(p => p.User.UserName)); ;
             });
         }
     }

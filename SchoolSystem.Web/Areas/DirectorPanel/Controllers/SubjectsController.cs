@@ -1,4 +1,5 @@
-﻿using SchoolSystem.Services.Interfaces.DirectorPanel;
+﻿using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
+using SchoolSystem.Services.Interfaces.DirectorPanel;
 using SchoolSystem.Web.Attritutes;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 {
     [MyAuthorize(Roles = "Director")]
     [RouteArea("DirectorPanel")]
-    [RoutePrefix("Subjects")]
     public class SubjectsController : Controller
     {
         private IDirectorSubjectsService service;
@@ -20,12 +20,93 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             this.service = service;
         }
 
-        [Route("All")]
+        [Route("Subjects/All")]
         public ActionResult All()
         {
             var vms = this.service.GetAllGrades();
 
             return View(vms);
+        }
+
+        [Route("Grades/{id}/AddSubject")]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Grades/{id}/AddSubject")]
+        public ActionResult Add(SubjectsBm bind, int id)
+        {
+            if (this.service.IsSubjectExist(bind, id))
+            {
+                this.ModelState.AddModelError("Name", "Subject already exist");
+
+            }
+            if (ModelState.IsValid)
+            {
+                this.service.AddSubject(bind, id);
+                return RedirectToAction("All");
+            }
+
+            return this.View();
+        }
+
+        [Route("Subjects/{id}/Remove")]
+        public ActionResult Remove(int id)
+        {
+            this.service.RemoveSubject(id);
+            return RedirectToAction("All");
+        }
+
+        [Route("Subjects/{id}/AddTeacher")]
+        public ActionResult AddTeacher()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        [Route("Subjects/{id}/AddTeacher")]
+        public ActionResult AddTeacher(TeacherBm bind, int id)
+        {
+            if (!this.service.IsTeacherExist(bind))
+            {
+                this.ModelState.AddModelError("UserName", "Teacher must exist in database");
+            }
+
+            if (ModelState.IsValid)
+            {
+                this.service.AddTeacherToSubject(bind, id);
+                return RedirectToAction("All");
+            }
+
+            return this.View();
+        }
+
+
+        [Route("Subjects/{id}/EditTeacher")]
+        public ActionResult EditTeacher(int id)
+        {
+            var vm = this.service.GetTeacherToEdit(id);
+            return this.View(vm);
+        }
+
+        [HttpPost]
+        [Route("Subjects/{id}/EditTeacher")]
+        public ActionResult EditTeacher(TeacherBm bind, int id)
+        {
+            if (!this.service.IsTeacherExist(bind))
+            {
+                this.ModelState.AddModelError("UserName", "Teacher must exist in database");
+            }
+
+            if (ModelState.IsValid)
+            {
+                this.service.EditTeacherToSubject(bind, id);
+                return RedirectToAction("All");
+            }
+
+            return this.View(bind);
         }
     }
 }

@@ -95,6 +95,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingModels\DirectorPanel\Students\StudentBm.cs" />
+    <Compile Include="BindingModels\DirectorPanel\Subjects\SubjectsBm.cs" />
+    <Compile Include="BindingModels\DirectorPanel\Subjects\TeacherBm.cs" />
     <Compile Include="BindingModels\DirectorPanel\Teachers\AddTeacherBm.cs" />
     <Compile Include="BindingModels\SchoolDiary\Teachers\AddNoteBm.cs" />
     <Compile Include="ViewModels\DirectorPanel\DirectorGradeVm.cs" />
@@ -139,9 +142,7 @@
     <Compile Include="ViewModels\SchoolDiary\Subjects\SubjectDetailsVm.cs" />
     <Compile Include="ViewModels\SchoolDiary\Teachers\EditStudentInfoVm.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Attributes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

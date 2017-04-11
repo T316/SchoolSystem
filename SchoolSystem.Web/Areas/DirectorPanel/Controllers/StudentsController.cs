@@ -1,4 +1,5 @@
-﻿using SchoolSystem.Services.Interfaces.DirectorPanel;
+﻿using SchoolSystem.Models.BindingModels.DirectorPanel.Students;
+using SchoolSystem.Services.Interfaces.DirectorPanel;
 using SchoolSystem.Web.Attritutes;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 {
     [MyAuthorize(Roles = "Director")]
     [RouteArea("DirectorPanel")]
-    [RoutePrefix("Students")]
     public class StudentsController : Controller
     {
         private IDirectorStudentsService service;
@@ -26,6 +26,32 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             var vms = this.service.GetAllGrades();
 
             return View(vms);
+        }
+
+        [Route("Grades/{id}/AddStudent")]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Grades/{id}/AddStudent")]
+        public ActionResult Add(StudentBm bind, int id)
+        {
+            if (ModelState.IsValid)
+            {
+                this.service.AddStudent(bind, id);
+                return RedirectToAction("All");
+            }
+
+            return this.View();
+        }
+
+        [Route("Students/{id}/Remove")]
+        public ActionResult Remove(int id)
+        {
+            this.service.RemoveStudent(id);
+            return RedirectToAction("All");
         }
     }
 }

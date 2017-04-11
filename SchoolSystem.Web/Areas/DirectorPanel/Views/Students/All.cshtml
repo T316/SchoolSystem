@@ -11,14 +11,20 @@
     <h4>
         @Html.DisplayFor(modelItem => grade.Value)@Html.DisplayFor(modelItem => grade.Class)
     </h4>
-        <table class="table">
-            @foreach (var student in grade.Students)
-            {
+    <div>
+        @Html.ActionLink("Add student", "Add", new { id = grade.Id }, null)
+    </div>
+    <table class="table">
+        @foreach (var student in grade.Students)
+        {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => student.Name)
                 </td>
+                <td>
+                    @Html.ActionLink("Remove student", "Remove", new { id = student.Id }, null)
+                </td>
             </tr>
-            }
-        </table>
+        }
+    </table>
 }

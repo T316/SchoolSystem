@@ -262,6 +262,11 @@
     <Content Include="Areas\SchoolDiary\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Students\All.cshtml" />
     <Content Include="Areas\DirectorPanel\Views\Subjects\All.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Grades\Add.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Subjects\Add.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Students\Add.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Subjects\AddTeacher.cshtml" />
+    <Content Include="Areas\DirectorPanel\Views\Subjects\EditTeacher.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

@@ -6,12 +6,18 @@
 
 <h3>All Grades</h3>
 
+@Html.ActionLink("Add grade", "Add")
+
 <table class="table">
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Value)@Html.DisplayFor(modelItem => item.Class)
+        </td>
+        <td>
+            @Html.ActionLink("Remove grade", "Remove", new { id = item.Id }, null)
         </td>
     </tr>
 }
