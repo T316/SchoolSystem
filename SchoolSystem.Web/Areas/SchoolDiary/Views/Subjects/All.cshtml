@@ -14,16 +14,14 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <h4 class="text-center">
-                @Html.DisplayFor(modelItem => item.Name)
-            </h4>
+            @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-sm btn-primary" })
         </td>
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-default go-back-btn" })
+@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })

@@ -6,10 +6,10 @@
 
 @if (Model.Any())
 {
-    <h2>Students in @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
+    <h2 class="text-center">Students in @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
 }
 
-<table class="table">
+<table class="table" id="students-table">
 
 @foreach (var item in Model) {
     <tr>
@@ -17,14 +17,14 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>          
-            @Html.ActionLink("Details", "StudentDetails", new { id = item.Id }) |
-            @Html.ActionLink("Marks", "StudentMarks", new { id = item.Id }) |
-            @Html.ActionLink("Notes", "StudentNotes", new { id = item.Id }) |
-            @Html.ActionLink("Absences", "StudentAbsences", new { id = item.Id })
+            @Html.ActionLink("Details", "StudentDetails", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" }) 
+            @Html.ActionLink("Marks", "StudentMarks", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
+            @Html.ActionLink("Notes", "StudentNotes", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
+            @Html.ActionLink("Absences", "StudentAbsences", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
         </td>
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Back to grades", "All", "Grades")
+@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })

@@ -4,12 +4,14 @@
     ViewBag.Title = "StudentNotes";
 }
 
-<h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
+<h2 class="text-center">@Html.DisplayFor(model => Model.Student.Name)</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Note", "AddNote", "Teacher", new { id = Model.Student.Id }, null);
+    @Html.ActionLink("Add Note", "AddNote", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
 }
+
+<br />
 
 @foreach (var item in Model.Notes) {
 
@@ -26,4 +28,4 @@
 
 }
 
-@Html.ActionLink("Back to students", "All", new { id = Model.Student.Grade.Id })
+@Html.ActionLink("Go back", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })

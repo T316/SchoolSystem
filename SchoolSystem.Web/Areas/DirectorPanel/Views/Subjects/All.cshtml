@@ -4,35 +4,38 @@
     ViewBag.Title = "All";
 }
 
-<h3>All Subjects</h3>
+<h3 class="text-center">All Subjects</h3>
 
 @foreach (var grade in Model)
 {
-    <h4>
-        @Html.DisplayFor(modelItem => grade.Value)@Html.DisplayFor(modelItem => grade.Class)
-    </h4>
-    <div>
-        @Html.ActionLink("Add subject", "Add", new { id = grade.Id }, null)
+    <div class="subject-container">
+        <h4 class="text-center">
+            @Html.DisplayFor(modelItem => grade.Value)@Html.DisplayFor(modelItem => grade.Class)
+        </h4>
+        <div>
+            @Html.ActionLink("Add subject", "Add", new { id = grade.Id }, new { @class = "btn btn-sm btn-info add-subject-btn" })
+        </div>
+        <br />
+        <table class="table subjects-table">
+            @foreach (var subject in grade.Subjects)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => subject.Name)
+                    </td>
+                    <td>
+                        @if (subject.Teacher == null)
+                    {
+                            @Html.ActionLink("Add Teacher", "AddTeacher", new { id = subject.Id }, new { @class = "btn btn-sm btn-info subjects-btn" })
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Edit Teacher", "EditTeacher", new { id = subject.Id }, new { @class = "btn btn-sm btn-warning subjects-btn" })
+                        }
+                        @Html.ActionLink("Remove subject", "Remove", new { id = subject.Id }, new { @class = "btn btn-sm btn-danger subjects-btn" })
+                    </td>
+                </tr>
+            }
+        </table>
     </div>
-    <table class="table">
-        @foreach (var subject in grade.Subjects)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => subject.Name)
-                </td>
-                <td>
-                    @if (subject.Teacher == null)
-                    {
-                        @Html.ActionLink("Add Teacher", "AddTeacher", new { id = subject.Id }, null)
-                    }
-                    else
-                    {
-                        @Html.ActionLink("Edit Teacher", "EditTeacher", new { id = subject.Id }, null)
-                    }
-                    | @Html.ActionLink("Remove subject", "Remove", new { id = subject.Id }, null)
-                </td>
-            </tr>
-        }
-    </table>
 }

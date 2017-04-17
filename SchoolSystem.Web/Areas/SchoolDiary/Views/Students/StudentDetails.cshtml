@@ -4,11 +4,11 @@
     ViewBag.Title = "StudentDetails";
 }
 
-<h2>Student Details</h2>
+<h2 class="text-center">Student Details</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Edit Student Info", "EditStudentInfo", "Teacher", new { id = Model.Id }, null);
+    @Html.ActionLink("Edit", "EditStudentInfo", "Teacher", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning edit-btn" });
 }
 
 <div>
@@ -72,5 +72,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Back to students", "All", new { id = Model.Grade.Id })
+    @Html.ActionLink("Go back", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
 </p>

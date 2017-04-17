@@ -11,15 +11,11 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <h4 class="text-center">
-                @Html.DisplayFor(modelItem => item.Value)@Html.DisplayFor(modelItem => item.Class)
-            </h4>
+            @Html.DisplayFor(modelItem => item.Value)@Html.DisplayFor(modelItem => item.Class)
         </td>
         <td>
-            @Html.ActionLink("Subjects", "All", "Subjects", new { id = item.Id }, new { @class = "btn btn-info all-grades-btn" }) 
-        </td>
-        <td>
-            @Html.ActionLink("Students", "All", "Students", new { id = item.Id }, new { @class = "btn btn-primary all-grades-btn" })
+            @Html.ActionLink("Subjects", "All", "Subjects", new { id = item.Id }, new { @class = "btn btn-sm btn-primary all-grades-btn" }) 
+            @Html.ActionLink("Students", "All", "Students", new { id = item.Id }, new { @class = "btn btn-sm btn-primary all-grades-btn" })
         </td>
     </tr>
 }

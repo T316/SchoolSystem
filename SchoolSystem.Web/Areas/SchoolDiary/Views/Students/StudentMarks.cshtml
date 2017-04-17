@@ -4,12 +4,14 @@
     ViewBag.Title = "StudentMarks";
 }
 
-<h2>@Html.DisplayFor(model => Model.Student.Name)</h2>
+<h2 class="text-center">@Html.DisplayFor(model => Model.Student.Name)</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Mark", "AddMark", "Teacher", new { id = Model.Student.Id }, null);
+    @Html.ActionLink("Add Mark", "AddMark", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
 }
+
+<br />
 
 <table class="table">
 
@@ -21,7 +23,7 @@
         <td>
             @if (User.IsInRole("Teacher"))
             {
-                @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id }, null)
+                @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id }, new { @class = "btn btn-sm btn-warning" })
             }
         </td>
     </tr>
@@ -29,4 +31,4 @@
 
 </table>
 
-@Html.ActionLink("Back to students", "All", new { id = Model.Student.Grade.Id })
+@Html.ActionLink("Go back", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })

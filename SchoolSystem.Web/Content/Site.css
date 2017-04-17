@@ -27,6 +27,9 @@ textarea {
     border: 1px solid black;
     padding: 5px;
     text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 10px;
 }
 
 .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
@@ -38,6 +41,11 @@ textarea {
     margin-left: 25%;
 }
 
+#students-table{
+    width: 90%;
+    margin-left: 5%;
+}
+
 .btn {
     border: 2px solid;
     border-radius: 10px;
@@ -46,10 +54,105 @@ textarea {
     width: 25%;
 }
 
+.abs-btn{
+    width: 12%;
+} 
+
+.edit-btn {
+    width: 7%;
+}
+
+.add-btn{
+    width: 7%;
+}
+
+.student-btn {
+    width: 20%;
+    display: inline-block;
+}
+
 .all-grades-btn{
     width: 50%;
 }
 
 .go-back-btn{
+    width: 7%;
+}
+
+.btn-info {
+    background-color: slateblue;
+}
+
+.subjects-btn{
+    width: 45%;
+}
+
+.btn-info:hover {
+    background-color: darkslateblue;
+    border-color: darkslateblue;
+}
+
+.add-teacher-btn{
     width: 10%;
+}
+
+.add-grade-btn {
+    width: 10%;
+}
+
+.add-subject-btn {
+    width: 18%;
+}
+
+.add-student-btn {
+    width: 18%;
+}
+
+.remove-teacher-btn{
+    width: 60%;
+}
+
+.remove-student-btn{
+    width: 50%;
+}
+
+#log-off{
+    padding-right: 30px;
+}
+
+dl {
+    margin-left: 35%;
+    width: 30%;
+}
+
+.form-horizontal {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.subject-container {
+    border: 1px solid blue;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.subjects-table {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.student-container {
+    border: 1px solid blue;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.students-table {
+    width: 70%;
+    margin-left: 15%;
 }

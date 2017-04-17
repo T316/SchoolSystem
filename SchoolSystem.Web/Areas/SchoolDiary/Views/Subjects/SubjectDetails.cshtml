@@ -4,7 +4,7 @@
     ViewBag.Title = "SubjectDetails";
 }
 
-<h2>Subject Details</h2>
+<h2 class="text-center">Subject Details</h2>
 
 <div>
     <hr />
@@ -31,5 +31,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Back to subjects", "All", new { id = Model.Grade.Id })
+    @Html.ActionLink("Go back", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
 </p>
