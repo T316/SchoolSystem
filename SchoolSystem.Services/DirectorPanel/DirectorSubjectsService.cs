@@ -52,6 +52,14 @@ namespace SchoolSystem.Services.DirectorPanel
             return vms;
         }
 
+        public DirectorGradeVm GetGradeById(int id)
+        {
+            Grade grade = this.Context.Grades.FirstOrDefault(g => g.Id == id);
+            DirectorGradeVm vm = Mapper.Instance.Map<Grade, DirectorGradeVm>(grade);
+
+            return vm;
+        }
+
         public TeacherBm GetTeacherToEdit(int id)
         {
             Subject subject = this.Context.Subjects.FirstOrDefault(s => s.Id == id);

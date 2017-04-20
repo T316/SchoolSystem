@@ -53,5 +53,11 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             this.service.RemoveStudent(id);
             return RedirectToAction("All");
         }
+
+        public ActionResult Load(int id)
+        {
+            var vm = this.service.GetGradeById(id);
+            return this.PartialView("_StudentPartial", vm);
+        }
     }
 }

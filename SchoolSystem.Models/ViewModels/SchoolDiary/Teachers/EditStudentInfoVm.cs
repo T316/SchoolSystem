@@ -11,10 +11,10 @@ namespace SchoolSystem.Models.ViewModels.SchoolDiary.Teachers
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Името е задължително!")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ЕГН е задължително!")]
         public string PersonalNumber { get; set; }
 
         public string Address { get; set; }

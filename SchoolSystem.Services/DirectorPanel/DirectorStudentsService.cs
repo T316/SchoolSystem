@@ -31,6 +31,14 @@ namespace SchoolSystem.Services.DirectorPanel
             return vms;
         }
 
+        public DirectorGradeVm GetGradeById(int id)
+        {
+            Grade grade = this.Context.Grades.FirstOrDefault(g => g.Id == id);
+            DirectorGradeVm vm = Mapper.Instance.Map<Grade, DirectorGradeVm>(grade);
+
+            return vm;
+        }
+
         public void RemoveStudent(int id)
         {
             Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);

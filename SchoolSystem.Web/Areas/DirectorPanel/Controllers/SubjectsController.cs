@@ -108,5 +108,11 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 
             return this.View(bind);
         }
+
+        public ActionResult Load(int id)
+        {
+            var vm = this.service.GetGradeById(id);
+            return this.PartialView("_SubjectPartial", vm);
+        }
     }
 }

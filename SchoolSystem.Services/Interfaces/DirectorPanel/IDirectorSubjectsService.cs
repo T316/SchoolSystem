@@ -25,5 +25,7 @@ namespace SchoolSystem.Services.Interfaces.DirectorPanel
         void EditTeacherToSubject(TeacherBm bind, int id);
 
         TeacherBm GetTeacherToEdit(int id);
+
+        DirectorGradeVm GetGradeById(int id);
     }
 }

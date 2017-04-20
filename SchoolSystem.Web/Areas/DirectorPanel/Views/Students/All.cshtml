@@ -6,28 +6,17 @@
 
 <h3 class="text-center">All Students</h3>
 
-@foreach (var grade in Model)
-{
-    <div class="student-container">
-        <h4 class="text-center">
-            @Html.DisplayFor(modelItem => grade.Value)@Html.DisplayFor(modelItem => grade.Class)
-        </h4>
-        <div>
-            @Html.ActionLink("Add student", "Add", new { id = grade.Id }, new { @class = "btn btn-sm btn-info add-student-btn" })
-        </div>
-        <br />
-        <table class="table students-table">
-            @foreach (var student in grade.Students)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => student.Name)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Remove student", "Remove", new { id = student.Id }, new { @class = "btn btn-sm btn-danger remove-student-btn" })
-                    </td>
-                </tr>
-            }
-        </table>
-    </div>
-}
+<div class="btn-group-vertical">
+    @foreach (var grade in Model)
+    {
+        @Ajax.ActionLink($"{grade.Value}{grade.Class} grade", "Load", new { id = grade.Id }, new AjaxOptions()
+        {
+            HttpMethod = "get",
+            UpdateTargetId = "cont"
+        },
+        new { @class = "btn btn-default" })
+    }
+</div>
+
+<div id="cont">
+</div>

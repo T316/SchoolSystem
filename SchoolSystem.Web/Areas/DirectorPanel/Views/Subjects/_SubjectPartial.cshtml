@@ -1,0 +1,36 @@
+﻿@model SchoolSystem.Models.ViewModels.DirectorPanel.DirectorGradeVm
+
+@{
+    ViewBag.Title = "_SubjectPartial";
+}
+
+<div class="subject-container">
+    <h4 class="text-center">
+        @Html.DisplayFor(modelItem => Model.Value)@Html.DisplayFor(modelItem => Model.Class)
+    </h4>
+    <div>
+        @Html.ActionLink("Add subject", "Add", new { id = Model.Id }, new { @class = "btn btn-sm btn-info add-subject-btn" })
+    </div>
+    <br />
+    <table class="table subjects-table">
+        @foreach (var subject in Model.Subjects)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => subject.Name)
+                </td>
+                <td>
+                    @if (subject.Teacher == null)
+                {
+                        @Html.ActionLink("Add Teacher", "AddTeacher", new { id = subject.Id }, new { @class = "btn btn-sm btn-info subjects-btn" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit Teacher", "EditTeacher", new { id = subject.Id }, new { @class = "btn btn-sm btn-warning subjects-btn" })
+                    }
+                    @Html.ActionLink("Remove subject", "Remove", new { id = subject.Id }, new { @class = "btn btn-sm btn-danger subjects-btn" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

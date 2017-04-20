@@ -10,10 +10,12 @@ namespace SchoolSystem.Services.Interfaces.DirectorPanel
 {
     public interface IDirectorStudentsService
     {
-        IEnumerable<DirectorGradeVm> GetAllGrades();
-
         void AddStudent(StudentBm bind, int id);
 
         void RemoveStudent(int id);
+
+        DirectorGradeVm GetGradeById(int id);
+
+        IEnumerable<DirectorGradeVm> GetAllGrades();
     }
 }
