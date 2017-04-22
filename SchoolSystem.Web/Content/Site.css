@@ -51,11 +51,11 @@ textarea {
     border-radius: 10px;
     display: block;
     margin: auto;
-    width: 25%;
+    width: 40%;
 }
 
 .abs-btn{
-    width: 12%;
+    width: 14%;
 } 
 
 .edit-btn {
@@ -63,7 +63,7 @@ textarea {
 }
 
 .add-btn{
-    width: 7%;
+    width: 12%;
 }
 
 .student-btn {
@@ -84,7 +84,7 @@ textarea {
 }
 
 .subjects-btn{
-    width: 45%;
+    width: 50%;
 }
 
 .btn-info:hover {
@@ -109,11 +109,11 @@ textarea {
 }
 
 .remove-teacher-btn{
-    width: 60%;
+    width: 75%;
 }
 
 .remove-student-btn{
-    width: 50%;
+    width: 60%;
 }
 
 #log-off{
@@ -121,8 +121,8 @@ textarea {
 }
 
 dl {
-    margin-left: 35%;
-    width: 30%;
+    margin-left: 33%;
+    width: 34%;
 }
 
 .form-horizontal {

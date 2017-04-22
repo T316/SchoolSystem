@@ -9,10 +9,11 @@ namespace SchoolSystem.Models.EntityModels
 {
     public class Mark
     {
+        [Key]
         public int Id { get; set; }
 
-        [Required]
-        [Range(2, 6)]
+        [Required(ErrorMessage = "Полето е задължително.")]
+        [Range(2, 6, ErrorMessage = "Стойността трябва да е между 2 и 6.")]
         public int Value { get; set; }
 
         [Required]

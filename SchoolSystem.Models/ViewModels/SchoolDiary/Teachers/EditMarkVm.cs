@@ -12,11 +12,13 @@ namespace SchoolSystem.Models.ViewModels.SchoolDiary.Teachers
     {
         public int Id { get; set; }
 
-        [Required]
-        [Range(2, 6)]
+        [Required(ErrorMessage = "Полето е задължително!")]
+        [Range(2, 6, ErrorMessage = "Стойността трябва да е между 2 и 6.")]
+        [Display(Name = "Оценка")]
         public int Value { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето е задължително!")]
+        [Display(Name = "Предмет")]
         public string SubjectName { get; set; }
 
         [Required]

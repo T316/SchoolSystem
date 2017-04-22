@@ -1,10 +1,10 @@
 ﻿@model SchoolSystem.Models.BindingModels.DirectorPanel.Subjects.TeacherBm
 
 @{
-    ViewBag.Title = "EditTeacher";
+    ViewBag.Title = "Промени учителя";
 }
 
-<h2 class="text-center">Edit Teacher</h2>
+<h2 class="text-center">Промени учителя</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -22,12 +22,12 @@
 
         <div class="form-group">
             <div>
-                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="submit" value="Промени" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Go back", "All", null, new { @class = "btn btn-sm btn-default go-back-btn" })
+    @Html.ActionLink("Назад", "All", null, new { @class = "btn btn-sm btn-default go-back-btn" })
 </div>

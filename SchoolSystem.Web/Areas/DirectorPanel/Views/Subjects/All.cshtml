@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<SchoolSystem.Models.ViewModels.DirectorPanel.DirectorGradeVm>
 
 @{
-    ViewBag.Title = "All";
+    ViewBag.Title = "Предмети";
 }
 
-<h3 class="text-center">All Subjects</h3>
+<h3 class="text-center">Предмети</h3>
 
 <div class="btn-group-vertical">
     @foreach (var grade in Model)
     {
-            @Ajax.ActionLink($"{grade.Value}{grade.Class} grade", "Load", new { id = grade.Id }, new AjaxOptions()
+            @Ajax.ActionLink($"{grade.Value}{grade.Class} клас", "Load", new { id = grade.Id }, new AjaxOptions()
         {
             HttpMethod = "get",
             UpdateTargetId = "cont"

@@ -10,9 +10,12 @@ namespace SchoolSystem.Models.BindingModels.SchoolDiary.Teachers
 { 
     public class AddNoteBm
     {
-        [Required]
+        [Required(ErrorMessage = "Полето е задължително.")]
+        [Display(Name = "Забележка")]
         public string Content { get; set; }
 
+        [Required]
+        [Display(Name = "Учител")]
         public string TeacherName { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<SchoolSystem.Models.ViewModels.SchoolDiary.Students.AllStudentsFromGradeVm>
 
 @{
-    ViewBag.Title = "Students";
+    ViewBag.Title = "Ученици";
 }
 
 @if (Model.Any())
 {
-    <h2 class="text-center">Students in @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
+    <h2 class="text-center">Учениците в @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) клас</h2>
 }
 
 <table class="table" id="students-table">
@@ -17,14 +17,14 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>          
-            @Html.ActionLink("Details", "StudentDetails", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" }) 
-            @Html.ActionLink("Marks", "StudentMarks", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
-            @Html.ActionLink("Notes", "StudentNotes", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
-            @Html.ActionLink("Absences", "StudentAbsences", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
+            @Html.ActionLink("Информация", "StudentDetails", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" }) 
+            @Html.ActionLink("Оценки", "StudentMarks", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
+            @Html.ActionLink("Забележки", "StudentNotes", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
+            @Html.ActionLink("Отсъствия", "StudentAbsences", new { id = item.Id }, new { @class = "btn btn-sm btn-primary student-btn" })
         </td>
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Най-якото училище - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -18,33 +18,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Най-якото училище", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("School Diary", "All", "Grades", new { area = "SchoolDiary" }, null)</li>
+                    <li>@Html.ActionLink("Начало", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("За нас", "About", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Контакти", "Contact", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Училищен дневник", "All", "Grades", new { area = "SchoolDiary" }, null)</li>
                     @if (User.IsInRole("Director"))
                     {
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                Director Panel
+                                Директорски панел
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    @Html.ActionLink("Teachers", "All", "Teachers", new { area = "DirectorPanel" }, null)
+                                    @Html.ActionLink("Учители", "All", "Teachers", new { area = "DirectorPanel" }, null)
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Grades", "All", "Grades", new { area = "DirectorPanel" }, null)
+                                    @Html.ActionLink("Класове", "All", "Grades", new { area = "DirectorPanel" }, null)
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Subjects", "All", "Subjects", new { area = "DirectorPanel" }, null)
+                                    @Html.ActionLink("Предмети", "All", "Subjects", new { area = "DirectorPanel" }, null)
                                 </li>
                                 <li>
-                                    @Html.ActionLink("Students", "All", "Students", new { area = "DirectorPanel" }, null)
+                                    @Html.ActionLink("Ученици", "All", "Students", new { area = "DirectorPanel" }, null)
                                 </li>
                             </ul>
                         </li>
@@ -58,7 +58,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p class="text-center">&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p class="text-center">&copy; @DateTime.Now.Year - Най-якото училище</p>
         </footer>
     </div>
 

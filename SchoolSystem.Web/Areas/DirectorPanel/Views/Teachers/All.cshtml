@@ -1,23 +1,23 @@
 ﻿@model IEnumerable<SchoolSystem.Models.ViewModels.DirectorPanel.DirectorAllTeachersVm>
 
 @{
-    ViewBag.Title = "All";
+    ViewBag.Title = "Учители";
 }
 
-<h3 class="text-center">All Teachers</h3>
+<h3 class="text-center">Учители</h3>
 
 <div>
-    @Html.ActionLink("Add Teacher", "Add", null, new { @class = "btn btn-sm btn-info add-btn add-teacher-btn" })
+    @Html.ActionLink("Добави учител", "Add", null, new { @class = "btn btn-sm btn-info add-btn add-teacher-btn" })
     <br />
 </div>
 
 <table class="table">
     <tr>
         <th>
-            Username
+            Потребителско име
         </th>
         <th>
-            Name
+            Име
         </th>
         <th></th>
     </tr>
@@ -30,7 +30,7 @@
             @Html.DisplayFor(modelItem => item.User.Name)
         </td>
         <td>
-            @Html.ActionLink("Remove Teacher", "Remove", new { id = item.Id }, new { @class = "btn btn-sm btn-danger remove-teacher-btn" })
+            @Html.ActionLink("Премахни учител", "Remove", new { id = item.Id }, new { @class = "btn btn-sm btn-danger remove-teacher-btn" })
         </td>
     </tr>
 }

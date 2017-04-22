@@ -1,10 +1,10 @@
 ﻿@model SchoolSystem.Models.BindingModels.DirectorPanel.Teachers.AddTeacherBm
 
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Добави учител";
 }
 
-<h2 class="text-center">Add Teacher</h2>
+<h2 class="text-center">Добави учител</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -22,12 +22,12 @@
 
         <div class="form-group">
             <div>
-                <input type="submit" value="Add teacher" class="btn btn-success" />
+                <input type="submit" value="Добави" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Go back", "All", "Teachers", new { area = "DirectorPanel" }, new {@class = "btn btn-sm btn-default go-back-btn" })
+    @Html.ActionLink("Назад", "All", "Teachers", new { area = "DirectorPanel" }, new {@class = "btn btn-sm btn-default go-back-btn" })
 </div>

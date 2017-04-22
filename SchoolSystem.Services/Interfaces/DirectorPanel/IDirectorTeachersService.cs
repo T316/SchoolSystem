@@ -15,6 +15,8 @@ namespace SchoolSystem.Services.Interfaces.DirectorPanel
 
         void RemoveTeacher(int id);
 
+        bool IsAlreadyTheacher(User user);
+
         User GetUserByUserName(string userName);
 
         User GetUserByTeacherId(string id);

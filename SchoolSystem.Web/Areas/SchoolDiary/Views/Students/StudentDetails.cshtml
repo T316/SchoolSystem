@@ -1,14 +1,14 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.StudentDetailsVm
 
 @{
-    ViewBag.Title = "StudentDetails";
+    ViewBag.Title = "Информация за ученика";
 }
 
-<h2 class="text-center">Student Details</h2>
+<h2 class="text-center">Информация за ученика</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Edit", "EditStudentInfo", "Teacher", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning edit-btn" });
+    @Html.ActionLink("Промени", "EditStudentInfo", "Teacher", new { id = Model.Id }, new { @class = "btn btn-sm btn-warning edit-btn" });
 }
 
 <div>
@@ -72,5 +72,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Go back", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
+    @Html.ActionLink("Назад", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
 </p>

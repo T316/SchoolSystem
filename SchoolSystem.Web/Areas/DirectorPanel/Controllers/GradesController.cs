@@ -40,7 +40,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         {
             if (this.service.IsGradeExist(bind))
             {
-                this.ModelState.AddModelError("Value", "Grade already exist");
+                this.ModelState.AddModelError("Value", "Класът вече съществува");
             }
 
             if (this.ModelState.IsValid)

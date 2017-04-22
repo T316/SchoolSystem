@@ -4,8 +4,8 @@ namespace SchoolSystem.Models.ViewModels.Account
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Електроната поща е задължителна.")]
+        [Display(Name = "Електрона поща")]
         public string Email { get; set; }
     }
 }

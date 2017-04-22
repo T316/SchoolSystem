@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,11 @@ namespace SchoolSystem.Models.EntityModels
             this.Subjects = new HashSet<Subject>();
         }
 
+        [Key]
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "Полето е задължително.")]
+        [Range(1, 13, ErrorMessage = "Стойността трябва да е между 1 и 13.")]
         public int Value { get; set; }
 
         public string Class { get; set; }

@@ -52,6 +52,17 @@ namespace SchoolSystem.Services.DirectorPanel
             return user;
         }
 
+        public bool IsAlreadyTheacher(User user)
+        {
+            var isTeacher = this.Context.Teachers.Any(t => t.User.Id == user.Id);
+            if (isTeacher)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public void RemoveTeacher(int id)
         {
             Teacher teacher = this.Context.Teachers.FirstOrDefault(t => t.Id == id);

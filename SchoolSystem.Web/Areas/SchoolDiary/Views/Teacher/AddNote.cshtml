@@ -1,10 +1,10 @@
 ﻿@model SchoolSystem.Models.BindingModels.SchoolDiary.Teachers.AddNoteBm
 
 @{
-    ViewBag.Title = "AddNote";
+    ViewBag.Title = "Добави забележка";
 }
 
-<h2 class="text-center">Add Note</h2>
+<h2 class="text-center">Добави забележка</h2>
 
 @using (Html.BeginForm("AddNote", "Teacher", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -25,9 +25,9 @@
 
     <div class="form-group">
         <div>
-            <input type="submit" class="btn btn-success" value="Add note" />
+            <input type="submit" class="btn btn-success" value="Добави" />
         </div>
     </div>
 }
 
-@Html.ActionLink("Go back", "StudentNotes", "Students", null, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "StudentNotes", "Students", null, new { @class = "btn btn-sm btn-default go-back-btn" })

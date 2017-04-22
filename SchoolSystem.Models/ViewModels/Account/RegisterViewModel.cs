@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolSystem.Models.ValidationAttributes;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,30 +7,30 @@ namespace SchoolSystem.Models.ViewModels.Account
 {
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Електроната поща е задължителна.")]
+        [EmailAddress(ErrorMessage = "Електроната поща не е валидна.")]
         [Index("EmailIndex", IsUnique = true)]
-        [Display(Name = "Email")]
+        [Display(Name = "Електрона поща")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Потребителското име е задължителна.")]
         [Index("UserNameIndex", IsUnique = true)]
-        [Display(Name = "Username")]
+        [Display(Name = "Потребителско име")]
         public string UserName { get; set; }
 
-        [Required]
-        [Display(Name = "Name")]
+        [Required(ErrorMessage = "Името е задължителна.")]
+        [Display(Name = "Име")]
         public string Name { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Паролата е задължителна.")]
+        [StringLength(100, ErrorMessage = "Паролата трябва да е поне 6 символа.", MinimumLength = 6)]
+        [Password(ErrorMessage = "Паролата трябва да съдържа поне една главна буква, една малка буква и една цифра.")]
+        [Display(Name = "Парола")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Потвърдете паролата")]
+        [Compare("Password", ErrorMessage = "Паролата и потвърдената парола не съвпадат.")]
         public string ConfirmPassword { get; set; }
     }
 }

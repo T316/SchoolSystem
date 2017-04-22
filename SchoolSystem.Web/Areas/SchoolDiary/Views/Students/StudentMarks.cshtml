@@ -1,14 +1,14 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.MarksForStudentVm
 
 @{
-    ViewBag.Title = "StudentMarks";
+    ViewBag.Title = "Оценките на ученика";
 }
 
 <h2 class="text-center">@Html.DisplayFor(model => Model.Student.Name)</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Mark", "AddMark", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
+    @Html.ActionLink("Добави оценка", "AddMark", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
 }
 
 <br />
@@ -23,7 +23,7 @@
         <td>
             @if (User.IsInRole("Teacher"))
             {
-                @Html.ActionLink("Edit Mark", "EditMark", "Teacher", new { id = item.Id }, new { @class = "btn btn-sm btn-warning" })
+                @Html.ActionLink("Промени", "EditMark", "Teacher", new { id = item.Id }, new { @class = "btn btn-sm btn-warning" })
             }
         </td>
     </tr>
@@ -31,4 +31,4 @@
 
 </table>
 
-@Html.ActionLink("Go back", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })

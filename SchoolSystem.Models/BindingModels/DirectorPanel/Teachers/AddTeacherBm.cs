@@ -10,7 +10,8 @@ namespace SchoolSystem.Models.BindingModels.DirectorPanel.Teachers
 {
     public class AddTeacherBm
     {
-        [Required]
+        [Required(ErrorMessage = "Потребителското име е задължително.")]
+        [Display(Name = "Потребителско име")]
         public string UserName { get; set; }
     }
 }

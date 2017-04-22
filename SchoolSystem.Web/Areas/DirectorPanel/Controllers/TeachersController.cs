@@ -62,7 +62,12 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 
             if (user == null)
             {
-                this.ModelState.AddModelError("UserName", "Username must exist");
+                this.ModelState.AddModelError("UserName", "Потребителя трябва да съществува.");
+            }
+
+            else if (this.service.IsAlreadyTheacher(user))
+            {
+                this.ModelState.AddModelError("UserName", "Потребителя вече е учител.");
             }
 
             if (this.ModelState.IsValid)

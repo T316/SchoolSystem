@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<SchoolSystem.Models.ViewModels.SchoolDiary.Subjects.AllSubjectsFromGradeVm>
 
 @{
-    ViewBag.Title = "Subjects";
+    ViewBag.Title = "Предмети";
 }
 
 @if (Model.Any())
 {
-    <h2 class="text-center">Subjects for @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) grade</h2>
+    <h2 class="text-center">Предметите на @Html.DisplayFor(model => Model.First().Grade.Value)@Html.DisplayFor(model => Model.First().Grade.Class) клас</h2>
 }
 
 <table class="table">
@@ -17,11 +17,11 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Details", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-sm btn-primary" })
+            @Html.ActionLink("Информация", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-sm btn-primary" })
         </td>
     </tr>
 }
 
 </table>
 
-@Html.ActionLink("Go back", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "All", "Grades", null, new { @class = "btn btn-sm btn-default go-back-btn" })

@@ -63,7 +63,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         {
             if (!this.service.IsStudentExists(id))
             {
-                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+                this.ModelState.AddModelError("Student", "Ученикът трябва да фигурира в системата.");
             }
 
             if (this.ModelState.IsValid)
@@ -89,12 +89,12 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         {
             if (!this.service.IsStudentExists(id))
             {
-                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+                this.ModelState.AddModelError("Student", "Ученикът трябва да фигурира в системата.");
             }
 
             else if (!this.service.IsSubjectNameExists(vm))
             {
-                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
+                this.ModelState.AddModelError("SubjectName", "Предметът трябва да фигурира в системата.");
             }
 
             if (this.ModelState.IsValid)
@@ -120,12 +120,12 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         {
             if (!this.service.IsStudentExists(vm.StudentId))
             {
-                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+                this.ModelState.AddModelError("Student", "Ученикът трябва да фигурира в системата.");
             }
 
             else if (!this.service.IsSubjectNameExists(vm))
             {
-                this.ModelState.AddModelError("SubjectName", "Subject must exist in School diary");
+                this.ModelState.AddModelError("SubjectName", "Предметът трябва да фигурира в системата.");
             }
 
             if (this.ModelState.IsValid)
@@ -151,7 +151,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         {
             if (!this.service.IsStudentExists(id))
             {
-                this.ModelState.AddModelError("Student", "Student must exist in School diary");
+                this.ModelState.AddModelError("Student", "Ученикът трябва да фигурира в системата.");
             }
 
             if (this.ModelState.IsValid)

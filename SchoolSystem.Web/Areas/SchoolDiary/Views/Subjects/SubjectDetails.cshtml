@@ -1,10 +1,10 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Subjects.SubjectDetailsVm
 
 @{
-    ViewBag.Title = "SubjectDetails";
+    ViewBag.Title = "Информация за предмета";
 }
 
-<h2 class="text-center">Subject Details</h2>
+<h2 class="text-center">@ViewBag.Title</h2>
 
 <div>
     <hr />
@@ -14,7 +14,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name) for @Html.DisplayFor(model => model.Grade.Value)@Html.DisplayFor(model => Model.Grade.Class) grade
+            @Html.DisplayFor(model => model.Name) за @Html.DisplayFor(model => model.Grade.Value)@Html.DisplayFor(model => Model.Grade.Class) клас
         </dd>
 
         @if (@Model.Teacher != null)
@@ -31,5 +31,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Go back", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
+    @Html.ActionLink("Назад", "All", new { id = Model.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
 </p>

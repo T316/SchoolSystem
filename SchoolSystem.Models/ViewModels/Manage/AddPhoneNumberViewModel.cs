@@ -6,7 +6,7 @@ namespace SchoolSystem.Models.ViewModels.Manage
     {
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Телефон")]
         public string Number { get; set; }
     }
 }

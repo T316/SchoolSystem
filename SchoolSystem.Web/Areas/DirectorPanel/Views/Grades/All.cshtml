@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<SchoolSystem.Models.ViewModels.DirectorPanel.Grades.DirectorAllGradesVm>
 
 @{
-    ViewBag.Title = "All";
+    ViewBag.Title = "Класове";
 }
 
-<h3 class="text-center">All Grades</h3>
+<h3 class="text-center">Класове</h3>
 
-@Html.ActionLink("Add grade", "Add", null, new { @class = "btn btn-sm btn-info add-btn add-grade-btn" })
+@Html.ActionLink("Добави клас", "Add", null, new { @class = "btn btn-sm btn-info add-btn add-grade-btn" })
 <br />
 
 <table class="table">
@@ -18,7 +18,7 @@
             @Html.DisplayFor(modelItem => item.Value)@Html.DisplayFor(modelItem => item.Class)
         </td>
         <td>
-            @Html.ActionLink("Remove grade", "Remove", new { id = item.Id }, new { @class = "btn btn-sm btn-danger" })
+            @Html.ActionLink("Премахни клас", "Remove", new { id = item.Id }, new { @class = "btn btn-sm btn-danger" })
         </td>
     </tr>
 }

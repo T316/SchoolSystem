@@ -87,7 +87,7 @@ namespace SchoolSystem.Web.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Невалиден опит за влизане в системата.");
                     return View(model);
             }
         }
@@ -130,7 +130,7 @@ namespace SchoolSystem.Web.Controllers
                     return View("Lockout");
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid code.");
+                    ModelState.AddModelError("", "Невалиден код.");
                     return View(model);
             }
         }

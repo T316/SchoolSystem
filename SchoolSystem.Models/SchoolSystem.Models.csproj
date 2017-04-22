@@ -100,6 +100,7 @@
     <Compile Include="BindingModels\DirectorPanel\Subjects\TeacherBm.cs" />
     <Compile Include="BindingModels\DirectorPanel\Teachers\AddTeacherBm.cs" />
     <Compile Include="BindingModels\SchoolDiary\Teachers\AddNoteBm.cs" />
+    <Compile Include="ValidationAttributes\PasswordAttribute.cs" />
     <Compile Include="ViewModels\DirectorPanel\DirectorGradeVm.cs" />
     <Compile Include="ViewModels\DirectorPanel\Grades\DirectorAllGradesVm.cs" />
     <Compile Include="ViewModels\DirectorPanel\Teachers\DirectorAllTeachersVm.cs" />

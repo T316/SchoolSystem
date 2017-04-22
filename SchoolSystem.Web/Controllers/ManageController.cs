@@ -55,12 +55,12 @@ namespace SchoolSystem.Web.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+                message == ManageMessageId.ChangePasswordSuccess ? "Паролата беше променена."
+                : message == ManageMessageId.SetPasswordSuccess ? "YПаролата бише зададена."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                : message == ManageMessageId.Error ? "Възникна грешка."
+                : message == ManageMessageId.AddPhoneSuccess ? "Телефона беше добавен."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Телефона беше премахнат."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -282,7 +282,7 @@ namespace SchoolSystem.Web.Controllers
         {
             ViewBag.StatusMessage =
                 message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                : message == ManageMessageId.Error ? "Възникна грешка"
                 : "";
             var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
             if (user == null)

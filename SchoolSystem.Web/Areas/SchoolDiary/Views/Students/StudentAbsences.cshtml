@@ -1,18 +1,18 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.StudentAbsencesVm
 
 @{
-    ViewBag.Title = "StudentAbsences";
+    ViewBag.Title = "Отсъствията на ученика";
 }
 
 <h2 class="text-center">@Model.Student.Name</h2>
 
 <p class="text-center">
-    @Html.DisplayNameFor(model => model.Student.Absences)
+    @Html.DisplayName("Отсъствия:")
     @Html.DisplayFor(model => model.Student.Absences)
     @if (Model.Student.Delays != 0)
     {
         <span>
-            and @Html.DisplayFor(model => model.Student.Delays)/3
+            и @Html.DisplayFor(model => model.Student.Delays)/3
         </span>
     }
 </p>
@@ -21,12 +21,12 @@
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Delay", "AddDelay", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info abs-btn" });
-    @Html.ActionLink("Remove Delay", "RemoveDelay", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-danger abs-btn" });
+    @Html.ActionLink("Добави закъснение", "AddDelay", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info abs-btn" });
+    @Html.ActionLink("Премахни закъснение", "RemoveDelay", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-danger abs-btn" });
     <br />
-    @Html.ActionLink("Add Absence", "AddAbsence", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info abs-btn" });
-    @Html.ActionLink("Remove Absence", "RemoveAbsence", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-danger abs-btn" });
+    @Html.ActionLink("Добави отсъствие", "AddAbsence", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info abs-btn" });
+    @Html.ActionLink("Премахни отсъствие", "RemoveAbsence", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-danger abs-btn" });
     <br />
 }
 
-@Html.ActionLink("Go back", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })

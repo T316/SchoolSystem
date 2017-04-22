@@ -9,7 +9,7 @@
         @Html.DisplayFor(modelItem => Model.Value)@Html.DisplayFor(modelItem => Model.Class)
     </h4>
     <div>
-        @Html.ActionLink("Add student", "Add", new { id = Model.Id }, new { @class = "btn btn-sm btn-info add-student-btn" })
+        @Html.ActionLink("Добави ученик", "Add", new { id = Model.Id }, new { @class = "btn btn-sm btn-info add-student-btn" })
     </div>
     <br />
     <table class="table students-table">
@@ -20,7 +20,7 @@
                     @Html.DisplayFor(modelItem => student.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Remove student", "Remove", new { id = student.Id }, new { @class = "btn btn-sm btn-danger remove-student-btn" })
+                    @Html.ActionLink("Премахни ученик", "Remove", new { id = student.Id }, new { @class = "btn btn-sm btn-danger remove-student-btn" })
                 </td>
             </tr>
         }

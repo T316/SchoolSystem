@@ -13,9 +13,12 @@ namespace SchoolSystem.Models.BindingModels.DirectorPanel.Subjects
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето е задължително.")]
+        [Display(Name = "Име")]
         public string Name { get; set; }
 
+        [Required]
+        [Display(Name = "Клас")]
         public Grade Grade { get; set; }
     }
 }

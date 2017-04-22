@@ -11,7 +11,7 @@ namespace SchoolSystem.Models.ViewModels.SchoolDiary.Grades
     {
         public int Id { get; set; }
 
-        [Range(1, 12)]
+        [Required]
         public int Value { get; set; }
 
         public string Class { get; set; }

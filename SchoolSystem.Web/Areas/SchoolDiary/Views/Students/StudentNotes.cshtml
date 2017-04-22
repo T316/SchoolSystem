@@ -1,14 +1,14 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.NotesForStudentVm
 
 @{
-    ViewBag.Title = "StudentNotes";
+    ViewBag.Title = "Забележките на ученика";
 }
 
 <h2 class="text-center">@Html.DisplayFor(model => Model.Student.Name)</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Add Note", "AddNote", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
+    @Html.ActionLink("Добави забележка", "AddNote", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
 }
 
 <br />
@@ -21,11 +21,11 @@
             <br />
             <span>@Html.DisplayFor(modelItem => item.Teacher.User.Name)</span>
             <br />
-            <span>Date: @Html.DisplayFor(modelItem => item.Date)</span>
+            <span>Дата: @Html.DisplayFor(modelItem => item.Date)</span>
         </div>
     </div>
     <br />
 
 }
 
-@Html.ActionLink("Go back", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
+@Html.ActionLink("Назад", "All", new { id = Model.Student.Grade.Id }, new { @class = "btn btn-sm btn-default go-back-btn" })
