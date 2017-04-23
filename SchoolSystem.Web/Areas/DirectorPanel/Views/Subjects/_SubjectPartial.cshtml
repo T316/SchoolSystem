@@ -5,9 +5,9 @@
 }
 
 <div class="subject-container">
-    <h4 class="text-center">
-        @Html.DisplayFor(modelItem => Model.Value)@Html.DisplayFor(modelItem => Model.Class)
-    </h4>
+    <h3 class="text-center">
+        @Html.DisplayFor(modelItem => Model.Value)@Html.DisplayFor(modelItem => Model.Class) клас
+    </h3>
     <div>
         @Html.ActionLink("Добави предмет", "Add", new { id = Model.Id }, new { @class = "btn btn-sm btn-info add-subject-btn" })
     </div>

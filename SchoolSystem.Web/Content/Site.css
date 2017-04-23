@@ -1,6 +1,58 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("img/notebook.png");
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.6rem;
+}
+
+h4 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.2rem;
+}
+
+h5 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.4rem;
+}
+
+p, div {
+    font-family: 'Lobster', cursive;
+    font-size: 2.3rem;
+}
+
+.navbar-brand {
+    font-size: 2.3rem;
+}
+
+.control-label {
+    font-size: 2rem;
+}
+
+.register-label {
+    font-size: 2rem;
+}
+
+span {
+    font-size: 2rem;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -46,24 +98,34 @@ textarea {
     margin-left: 5%;
 }
 
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
 .btn {
     border: 2px solid;
     border-radius: 10px;
     display: block;
     margin: auto;
-    width: 40%;
+    width: 50%;
+    font-size: 1.8rem;
+}
+
+.submit-btn{
+    width: 20%;
+    padding: 8px;
 }
 
 .abs-btn{
-    width: 14%;
+    width: 16%;
 } 
 
 .edit-btn {
-    width: 7%;
+    width: 10%;
 }
 
 .add-btn{
-    width: 12%;
+    width: 15%;
 }
 
 .student-btn {
@@ -71,12 +133,13 @@ textarea {
     display: inline-block;
 }
 
-.all-grades-btn{
-    width: 50%;
+.all-grades-btn {
+    width: 48%;
+    display: inline-block;
 }
 
 .go-back-btn{
-    width: 7%;
+    width: 10%;
 }
 
 .btn-info {
@@ -84,7 +147,7 @@ textarea {
 }
 
 .subjects-btn{
-    width: 50%;
+    width: 82%;
 }
 
 .btn-info:hover {
@@ -93,27 +156,27 @@ textarea {
 }
 
 .add-teacher-btn{
-    width: 10%;
+    width: 15%;
 }
 
 .add-grade-btn {
-    width: 10%;
+    width: 15%;
 }
 
 .add-subject-btn {
-    width: 18%;
+    width: 32%;
 }
 
 .add-student-btn {
-    width: 18%;
+    width: 32%;
 }
 
 .remove-teacher-btn{
-    width: 75%;
+    width: 95%;
 }
 
 .remove-student-btn{
-    width: 60%;
+    width: 90%;
 }
 
 #log-off{
@@ -121,8 +184,13 @@ textarea {
 }
 
 dl {
-    margin-left: 33%;
-    width: 34%;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.dl-horizontal dt {
+    width: 40%;
+    padding-right: 10px;
 }
 
 .form-horizontal {
@@ -174,4 +242,14 @@ footer {
     height: 30px;
     width: 100%;
     background: #999;
+}
+
+.carousel-inner > .item > img {
+    height: auto;
+    width: 100%;
+}
+
+#myCarousel {
+    width: 70%;
+    margin-left: 15%;
 }
