@@ -15,19 +15,27 @@
 
 <table class="table">
 
-@foreach (var item in Model.Marks) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
-        </td>
-        <td>
+    @foreach (var item in Model.Marks)
+    {
+        <tr>
             @if (User.IsInRole("Teacher"))
             {
-                @Html.ActionLink("Промени", "EditMark", "Teacher", new { id = item.Id }, new { @class = "btn btn-sm btn-warning" })
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Промени", "EditMark", "Teacher", new { id = item.Id }, new { @class = "btn btn-sm btn-warning" })
+                </td>
             }
-        </td>
-    </tr>
-}
+            else
+            {
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Subject.Name) - @Html.DisplayFor(modelItem => item.Value)
+                </td>
+            }
+        </tr>
+    }
 
 </table>
 

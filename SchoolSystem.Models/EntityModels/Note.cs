@@ -9,7 +9,7 @@ namespace SchoolSystem.Models.EntityModels
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Полето е задължително.")]
-        [MaxLength(200, ErrorMessage = "Забележката трябва да е максимум 200 символа.")]
+        [MaxLength(50, ErrorMessage = "Забележката трябва да е максимум 50 символа.")]
         public string Content { get; set; }
 
         [Required]

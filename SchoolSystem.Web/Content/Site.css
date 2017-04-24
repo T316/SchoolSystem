@@ -39,6 +39,16 @@ p, div {
     font-size: 2.3rem;
 }
 
+.navbar-nav > li > .dropdown-menu {
+    font-family: 'Lobster', cursive;
+    font-size: 2.3rem;
+    width: 100%;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    text-align: center;
+}
+    
 .navbar-brand {
     font-size: 2.3rem;
 }
@@ -200,7 +210,7 @@ dl {
 }
 
 .subject-container {
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 15px;
     margin-bottom: 20px;
     width: 80%;
@@ -213,7 +223,7 @@ dl {
 }
 
 .student-container {
-    border: 1px solid blue;
+    border: 1px solid black;
     border-radius: 15px;
     margin-bottom: 20px;
     width: 80%;
@@ -246,10 +256,47 @@ footer {
 
 .carousel-inner > .item > img {
     height: auto;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 #myCarousel {
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.carousel-control .glyphicon-chevron-left {
+        margin-left: -35px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    margin-right: -35px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #090909;
+}
+
+.error-pic{
+    margin-top: 50px;
+    width: 16%;
+    margin-left: 42%;
+}
+
+.contact-us-img{
+    width: 30%;
+    margin-left: 35%;
+}
+
+#about-us {
+    float: right;
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+#about-us-pic {
+    float: left;
+    width: 40%;
 }
