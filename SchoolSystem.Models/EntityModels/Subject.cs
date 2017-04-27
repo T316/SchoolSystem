@@ -16,7 +16,6 @@ namespace SchoolSystem.Models.EntityModels
         [MaxLength(30, ErrorMessage = "Името на предмета трябва да е максимум 30 символа.")]
         public string Name { get; set; }
 
-        [Required]
         public virtual Grade Grade { get; set; }
 
         public virtual Teacher Teacher { get; set; }

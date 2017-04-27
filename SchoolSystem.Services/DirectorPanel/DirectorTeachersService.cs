@@ -10,11 +10,17 @@ using AutoMapper;
 using SchoolSystem.Models.BindingModels.DirectorPanel;
 using System.Data.Entity;
 using SchoolSystem.Services.Interfaces.DirectorPanel;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.DirectorPanel
 {
     public class DirectorTeachersService : Service, IDirectorTeachersService
     {
+        public DirectorTeachersService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public void AddTeacher(User user)
         {
             Teacher teacher = new Teacher();

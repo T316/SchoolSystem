@@ -14,11 +14,17 @@ using System.ComponentModel.DataAnnotations;
 using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
 using SchoolSystem.Services.Interfaces.SchoolDiary;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.SchoolDiary
 {
     public class TeacherService : Service, ITeacherService
     {
+        public TeacherService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public void AddAbsence(int id)
         {
             Student student = this.Context.Students.FirstOrDefault(s => s.Id == id);

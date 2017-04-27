@@ -8,11 +8,17 @@ using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.EntityModels;
 using AutoMapper;
 using SchoolSystem.Models.BindingModels.DirectorPanel.Students;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.DirectorPanel
 {
     public class DirectorStudentsService : Service, IDirectorStudentsService
     {
+        public DirectorStudentsService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public void AddStudent(StudentBm bind, int id)
         {
             Student student = Mapper.Instance.Map<StudentBm, Student>(bind);

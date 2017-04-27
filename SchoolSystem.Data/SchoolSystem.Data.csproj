@@ -55,7 +55,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ISchoolSystemContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mocks\FakeUsersDbSet.cs" />
+    <Compile Include="Mocks\FakeSchoolSystemContext.cs" />
+    <Compile Include="Mocks\FakeDbSet.cs" />
+    <Compile Include="Mocks\FakeGradesDbSet.cs" />
+    <Compile Include="Mocks\FakeMarksDbSet.cs" />
+    <Compile Include="Mocks\FakeNotesDbSet.cs" />
+    <Compile Include="Mocks\FakeStudentsDbSet.cs" />
+    <Compile Include="Mocks\FakeSubjectsDbSet.cs" />
+    <Compile Include="Mocks\FakeTeachersDbSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolSystemContext.cs" />
   </ItemGroup>

@@ -9,11 +9,19 @@ using AutoMapper;
 using SchoolSystem.Models.ViewModels.DirectorPanel;
 using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
 using System.Data.Entity;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
+using System.Diagnostics;
+using System.Data.Entity.Validation;
 
 namespace SchoolSystem.Services.DirectorPanel
 {
     public class DirectorSubjectsService : Service, IDirectorSubjectsService
     {
+        public DirectorSubjectsService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public void AddSubject(SubjectsBm bind, int id)
         {
             Subject subject = Mapper.Instance.Map<SubjectsBm, Subject>(bind);

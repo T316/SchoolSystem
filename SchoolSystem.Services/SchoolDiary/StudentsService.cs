@@ -7,11 +7,16 @@ using System.Linq;
 using System;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
 using SchoolSystem.Services.Interfaces.SchoolDiary;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.SchoolDiary
 {
     public class StudentsService : Service, IStudentsService
     {
+        public StudentsService(ISchoolSystemContext context) : base(context)
+        {
+        }
 
         public IEnumerable<AllStudentsFromGradeVm> GetAllStudentsForGrade(int id)
         {

@@ -7,11 +7,17 @@ using System.Linq;
 using System;
 using SchoolSystem.Models.ViewModels.SchoolDiary.Subjects;
 using SchoolSystem.Services.Interfaces.SchoolDiary;
+using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.SchoolDiary
 {
     public class SubjectsService : Service, ISubjectsService
     {
+        public SubjectsService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public IEnumerable<AllSubjectsFromGradeVm> GetAllSubjectsForGrade(int id)
         {
             IEnumerable<Subject> allSubjects = this.Context.Subjects.Where(subject => subject.Grade.Id == id);

@@ -16,6 +16,8 @@ namespace SchoolSystem.Web.App_Start
     using SchoolSystem.Services.SchoolDiary;
     using SchoolSystem.Services.Interfaces.DirectorPanel;
     using SchoolSystem.Services.DirectorPanel;
+    using SchoolSystem.Data;
+    using SchoolSystem.Data.Interfaces;
 
     public static class NinjectWebCommon 
     {
@@ -75,6 +77,7 @@ namespace SchoolSystem.Web.App_Start
             kernel.Bind<IDirectorGradesService>().To<DirectorGradesService>();
             kernel.Bind<IDirectorStudentsService>().To<DirectorStudentsService>();
             kernel.Bind<IDirectorSubjectsService>().To<DirectorSubjectsService>();
+            kernel.Bind<ISchoolSystemContext>().To<SchoolSystemContext>();
         }        
     }
 }

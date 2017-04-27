@@ -17,7 +17,6 @@ namespace SchoolSystem.Models.BindingModels.DirectorPanel.Subjects
         [Display(Name = "Име")]
         public string Name { get; set; }
 
-        [Required]
         [Display(Name = "Клас")]
         public Grade Grade { get; set; }
     }

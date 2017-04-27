@@ -40,8 +40,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         {
             if (this.service.IsSubjectExist(bind, id))
             {
-                this.ModelState.AddModelError("Name", "Subject already exist");
-
+                this.ModelState.AddModelError("Name", "Предметът вече съществува");
             }
             if (ModelState.IsValid)
             {
@@ -71,7 +70,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         {
             if (!this.service.IsTeacherExist(bind))
             {
-                this.ModelState.AddModelError("UserName", "Teacher must exist in database");
+                this.ModelState.AddModelError("UserName", "Учителя трябва да съществува в системата");
             }
 
             if (ModelState.IsValid)
@@ -97,7 +96,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         {
             if (!this.service.IsTeacherExist(bind))
             {
-                this.ModelState.AddModelError("UserName", "Teacher must exist in database");
+                this.ModelState.AddModelError("UserName", "Учителя трябва да съществува в системата");
             }
 
             if (ModelState.IsValid)

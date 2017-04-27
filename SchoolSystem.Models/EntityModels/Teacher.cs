@@ -13,7 +13,6 @@ namespace SchoolSystem.Models.EntityModels
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public virtual User User { get; set; }
 
         public virtual ICollection<Subject> Subjects { get; set; }

@@ -9,11 +9,16 @@ using SchoolSystem.Models.EntityModels;
 using AutoMapper;
 using SchoolSystem.Models.ViewModels.DirectorPanel;
 using System.Data.Entity;
+using SchoolSystem.Data.Interfaces;
 
 namespace SchoolSystem.Services.DirectorPanel
 {
     public class DirectorGradesService : Service, IDirectorGradesService
     {
+        public DirectorGradesService(ISchoolSystemContext context) : base(context)
+        {
+        }
+
         public void AddGrade(DirectorGradeVm bind)
         {
             Grade grade = Mapper.Instance.Map<DirectorGradeVm, Grade>(bind);

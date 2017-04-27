@@ -1,16 +1,18 @@
 ﻿using SchoolSystem.Data;
+using SchoolSystem.Data.Interfaces;
+using SchoolSystem.Data.Mocks;
 
 namespace SchoolSystem.Services
 {
     public class Service
     {
-        private SchoolSystemContext context;
+        private ISchoolSystemContext context;
 
-        protected Service()
+        protected Service(ISchoolSystemContext context)
         {
-            this.context = new SchoolSystemContext();
+            this.context = context;
         }
 
-        protected SchoolSystemContext Context => this.context;
+        protected ISchoolSystemContext Context => this.context;
     }
 }
