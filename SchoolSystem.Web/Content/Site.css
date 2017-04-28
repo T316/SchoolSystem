@@ -43,18 +43,21 @@ p, div {
     font-family: 'Lobster', cursive;
     font-size: 2.3rem;
     width: 100%;
+    background-color: #222222;
+}
+
+.dropdown-menu > li > a {
+    color: white;
 }
 
 .navbar-nav > li > .dropdown-menu {
     text-align: center;
 }
-    
-.navbar-brand {
-    font-size: 2.3rem;
-}
 
-.control-label {
-    font-size: 2rem;
+.navbar-brand {
+    margin-left: 0px;
+    font-size: 2.3rem;
+    background-color: #000000;
 }
 
 .register-label {
@@ -98,12 +101,12 @@ textarea {
     float: none;
 }
 
-.table{
+.table {
     width: 50%;
     margin-left: 25%;
 }
 
-#students-table{
+#students-table {
     width: 90%;
     margin-left: 5%;
 }
@@ -121,20 +124,20 @@ textarea {
     font-size: 1.8rem;
 }
 
-.submit-btn{
+.submit-btn {
     width: 20%;
     padding: 8px;
 }
 
-.abs-btn{
+.abs-btn {
     width: 16%;
-} 
+}
 
 .edit-btn {
     width: 10%;
 }
 
-.add-btn{
+.add-btn {
     width: 15%;
 }
 
@@ -148,7 +151,7 @@ textarea {
     display: inline-block;
 }
 
-.go-back-btn{
+.go-back-btn {
     width: 10%;
 }
 
@@ -156,7 +159,7 @@ textarea {
     background-color: slateblue;
 }
 
-.subjects-btn{
+.subjects-btn {
     width: 82%;
 }
 
@@ -165,7 +168,7 @@ textarea {
     border-color: darkslateblue;
 }
 
-.add-teacher-btn{
+.add-teacher-btn {
     width: 15%;
 }
 
@@ -181,15 +184,15 @@ textarea {
     width: 32%;
 }
 
-.remove-teacher-btn{
+.remove-teacher-btn {
     width: 95%;
 }
 
-.remove-student-btn{
+.remove-student-btn {
     width: 90%;
 }
 
-#log-off{
+#log-off {
     padding-right: 30px;
 }
 
@@ -266,7 +269,7 @@ footer {
 }
 
 .carousel-control .glyphicon-chevron-left {
-        margin-left: -35px;
+    margin-left: -35px;
 }
 
 .carousel-control .glyphicon-chevron-right {
@@ -277,13 +280,13 @@ footer {
     background-color: #090909;
 }
 
-.error-pic{
+.error-pic {
     margin-top: 50px;
     width: 16%;
     margin-left: 42%;
 }
 
-.contact-us-img{
+.contact-us-img {
     width: 30%;
     margin-left: 35%;
 }
@@ -303,4 +306,637 @@ footer {
 
 #registration-btn {
     margin-top: 25px;
+}
+
+#login-btn {
+    margin-top: 25px;
+}
+
+tr > td {
+    text-align: center;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .navbar-nav > li > a {
+        font-size: 1.8rem;
+    }
+
+    .navbar-nav > li > .dropdown-menu {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 65%;
+    }
+
+    .student-btn {
+        width: 24%;
+    }
+
+    .all-grades-btn {
+        width: 48%;
+    }
+
+    .go-back-btn {
+        width: 15%;
+    }
+
+    .edit-btn {
+        width: 16%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 18%;
+    }
+
+    .abs-btn {
+        width: 20%;
+    }
+
+    .remove-teacher-btn {
+        width: 95%;
+    }
+
+    .add-subject-btn {
+        width: 32%;
+    }
+
+    .add-student-btn {
+        width: 32%;
+    }
+
+    .remove-student-btn {
+        width: 94%;
+    }
+
+    .subjects-btn {
+        width: 84%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .navbar-nav > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav > li > a {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        margin-right: 0px;
+    }
+
+    .btn {
+        width: 65%;
+    }
+
+    .student-btn{
+        width: 24%;
+    }
+
+    .all-grades-btn {
+        width: 48%;
+    }
+
+    .go-back-btn {
+        width: 15%;
+    }
+
+    .edit-btn {
+        width: 16%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 18%;
+    }
+
+    .abs-btn {
+        width: 20%;
+    }
+
+    .remove-teacher-btn {
+        width: 95%;
+    }
+
+    .add-subject-btn {
+        width: 32%;
+    }
+
+    .add-student-btn {
+        width: 32%;
+    }
+
+    .remove-student-btn {
+        width: 94%;
+    }
+
+    .subjects-btn {
+        width: 84%;
+    }
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+        .navbar-nav > li {
+            float: none;
+        }
+
+            .navbar-nav > li > a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+    .collapse.in {
+        display: block !important;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -15px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -15px;
+    }
+
+    .form-group > div > input[type="submit"] {
+        margin-left: 60px;
+    }
+
+    .navbar-nav > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav > li > a {
+        display: inline-block;
+    }
+
+    #about-us {
+        float: none;
+        width: 90%;
+        padding-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5%;
+    }
+
+    #about-us-pic {
+        float: none;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    dl {
+        margin-left: 22%;
+        width: 60%;
+    }
+
+    .dl-horizontal dt {
+        width: 34%;
+    }
+
+    .table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .btn {
+        width: 56%;
+    }
+
+    .all-grades-btn {
+        width: 48%;
+    }
+
+    .go-back-btn {
+        width: 15%;
+    }
+
+    .edit-btn {
+        width: 16%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 25%;
+    }
+
+    .abs-btn {
+        width: 28%;
+    }
+
+    .btn-group-vertical {
+        float: none;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .btn-group, .btn-group-vertical {
+        position: static;
+    }
+
+    #cont {
+        float: none;
+        width: 100%;
+    }
+
+    .change-pass-btn {
+        width: 54%;
+    }
+    
+    .add-student-btn {
+        width: 30%;
+    }
+
+    .remove-student-btn {
+        width: 80%;
+    }
+
+    .add-subject-btn {
+        width: 30%;
+    }
+
+    .subjects-btn {
+        width: 70%;
+    }
+
+    .remove-grade-btn {
+        width: 35%;
+    }
+
+    .student-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .subject-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .table > tbody > tr > td {
+        padding-right: 0px;
+    }
+
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+
+    .navbar-right {
+        margin-right: 0px;
+    }
+
+    .form-horizontal .form-group {
+        margin-left: 15%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -15px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -15px;
+    }
+
+    .navbar-nav > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav > li > a {
+        display: inline-block;
+    }
+
+    .form-group > div > input[type="submit"] {
+        margin-left: 20px;
+    }
+
+    #about-us {
+        float: none;
+        width: 90%;
+        padding-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5%;
+    }
+
+    #about-us-pic {
+        float: none;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    dl {
+        margin-left: 25%;
+        width: 70%;
+    }
+
+    .dl-horizontal dt {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .contact-us-img {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .btn {
+        width: 85%;
+        font-size: 1.5rem;
+    }
+
+    .all-grades-btn {
+        width: 48%;
+        font-size: 1.5rem;
+    }
+
+    .go-back-btn {
+        width: 30%;
+    }
+
+    .edit-btn {
+        width: 30%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 32%;
+    }
+
+    .abs-btn {
+        width: 40%;
+    }
+
+    .btn-group-vertical {
+        float: none;
+        width: 100%;
+    }
+
+    .btn-group, .btn-group-vertical {
+        position: static;
+    }
+
+    #cont {
+        float: none;
+        width: 100%;
+    }
+
+    .add-student-btn {
+        width: 30%;
+    }
+
+    .remove-student-btn {
+        width: 80%;
+    }
+
+    .add-subject-btn {
+        width: 30%;
+    }
+
+    .subjects-btn {
+        width: 70%;
+    }
+
+    .remove-grade-btn {
+        width: 50%;
+    }
+
+    .student-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .subject-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .table > tbody > tr > td {
+        padding-right: 0px;
+    }
+
+    .form-horizontal .form-group {
+        margin-left: 0%;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -15px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -15px;
+    }
+
+    .navbar-nav > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav > li > a {
+        display: inline-block;
+    }
+
+    .form-group > div > input[type="submit"] {
+        margin-left: 0px;
+    }
+
+    #about-us {
+        float: none;
+        width: 90%;
+        padding-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5%;
+    }
+
+    #about-us-pic {
+        float: none;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    dl {
+        margin-left: 25%;
+        width: 70%;
+    }
+
+    .dl-horizontal dt {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .contact-us-img {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    p, div {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .all-grades-btn {
+        width: 48%;
+        font-size: 1.5rem;
+    }
+
+    .go-back-btn {
+        width: 30%;
+    }
+
+    .edit-btn {
+        width: 30%;
+    }
+
+    .submit-btn {
+        width: 50%;
+    }
+
+    .add-btn {
+        width: 50%;
+    }
+
+    .abs-btn {
+        width: 60%;
+    }
+
+    .btn-group-vertical {
+        float: none;
+        width: 100%;
+    }
+
+    .btn-group, .btn-group-vertical {
+        position: static;
+    }
+
+    #cont {
+        float: none;
+        width: 100%;
+    }
+
+    .add-student-btn {
+        width: 50%;
+    }
+
+    .remove-student-btn {
+        width: 96%;
+    }
+
+    .add-subject-btn {
+        width: 60%;
+    }
+
+    .student-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .subject-container {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 15px;
+    }
+
+    .table > tbody > tr > td {
+        padding-right: 0px;
+    }
 }
