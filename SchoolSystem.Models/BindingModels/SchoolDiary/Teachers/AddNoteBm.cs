@@ -5,8 +5,8 @@
     public class AddNoteBm
     {
         [Required(ErrorMessage = "Полето е задължително.")]
-        [MaxLength(50, ErrorMessage = "Забележката трябва да е максимум 50 символа.")]
-        [Display(Name = "Забележка")]
+        [MaxLength(50, ErrorMessage = "Бележката трябва да е максимум 50 символа.")]
+        [Display(Name = "Бележка")]
         public string Content { get; set; }
 
         [Required]

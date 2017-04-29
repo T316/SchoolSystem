@@ -7,8 +7,8 @@
     public class NotesVm
     {
         [Required(ErrorMessage = "Полето е задължително.")]
-        [MaxLength(200, ErrorMessage = "Забележката трябва да е максимум 200 символа.")]
-        [Display(Name = "Забележка")]
+        [MaxLength(200, ErrorMessage = "Бележката трябва да е максимум 200 символа.")]
+        [Display(Name = "Бележка")]
         public string Content { get; set; }
 
         [Required]

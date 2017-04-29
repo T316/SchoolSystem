@@ -9,7 +9,7 @@
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Полето е задължително.")]
-        [MaxLength(50, ErrorMessage = "Забележката трябва да е максимум 50 символа.")]
+        [MaxLength(50, ErrorMessage = "Бележката трябва да е максимум 50 символа.")]
         public string Content { get; set; }
 
         [Required]

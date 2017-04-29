@@ -1,14 +1,14 @@
 ﻿@model SchoolSystem.Models.ViewModels.SchoolDiary.Students.NotesForStudentVm
 
 @{
-    ViewBag.Title = "Забележките на ученика";
+    ViewBag.Title = "Бележките за ученика";
 }
 
 <h2 class="text-center">@Html.DisplayFor(model => Model.Student.Name)</h2>
 
 @if (User.IsInRole("Teacher"))
 {
-    @Html.ActionLink("Добави забележка", "AddNote", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
+    @Html.ActionLink("Добави бележка", "AddNote", "Teacher", new { id = Model.Student.Id }, new { @class = "btn btn-sm btn-info add-btn" });
 }
 
 <br />
