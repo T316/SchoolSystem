@@ -1,24 +1,15 @@
-﻿using SchoolSystem.Models.EntityModels;
-using SchoolSystem.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolSystem.Models.BindingModels;
-using AutoMapper;
-using System.Security.Principal;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
-using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
-using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Data;
-using SchoolSystem.Data.Interfaces;
-
-namespace SchoolSystem.Services.SchoolDiary
+﻿namespace SchoolSystem.Services.SchoolDiary
 {
+    using SchoolSystem.Models.EntityModels;
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using AutoMapper;
+    using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Data.Interfaces;
+
     public class TeacherService : Service, ITeacherService
     {
         public TeacherService(ISchoolSystemContext context) : base(context)

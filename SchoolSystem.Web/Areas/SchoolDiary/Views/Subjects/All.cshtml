@@ -17,7 +17,7 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Информация", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-sm btn-primary" })
+            @Html.ActionLink("Информация", "SubjectDetails", new { id=item.Id }, new { @class = "btn btn-sm btn-primary subject-info-btn" })
         </td>
     </tr>
 }

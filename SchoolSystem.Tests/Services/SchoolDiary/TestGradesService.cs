@@ -1,20 +1,16 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SchoolSystem.Web.Areas.SchoolDiary.Controllers;
-using SchoolSystem.Services.SchoolDiary;
-using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Data.Mocks;
-using SchoolSystem.Data.Interfaces;
-using System.Web.Http;
-using TestStack.FluentMVCTesting;
-using AutoMapper;
-using SchoolSystem.Models.EntityModels;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Grades;
-using System.Collections.Generic;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Tests.Controllers.SchoolDiary
+﻿namespace SchoolSystem.Tests.Controllers.SchoolDiary
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using SchoolSystem.Web.Areas.SchoolDiary.Controllers;
+    using SchoolSystem.Services.SchoolDiary;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Data.Mocks;
+    using SchoolSystem.Data.Interfaces;
+    using AutoMapper;
+    using SchoolSystem.Models.EntityModels;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Grades;
+    using System.Collections.Generic;
+
     [TestClass]
     public class TestGradesService
     {

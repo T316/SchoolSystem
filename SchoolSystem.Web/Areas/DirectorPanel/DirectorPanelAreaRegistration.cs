@@ -1,11 +1,7 @@
-﻿using Ninject;
-using SchoolSystem.Services;
-using SchoolSystem.Services.Interfaces;
-using System.Web.Mvc;
-using System.Web.Routing;
-
-namespace SchoolSystem.Web.Areas.DirectorPanel
+﻿namespace SchoolSystem.Web.Areas.DirectorPanel
 {
+    using System.Web.Mvc;
+
     public class DirectorPanelAreaRegistration : AreaRegistration 
     {
         public override string AreaName 

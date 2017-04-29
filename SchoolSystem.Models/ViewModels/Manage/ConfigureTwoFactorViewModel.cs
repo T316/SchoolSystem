@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNet.Identity;
-using Microsoft.Owin.Security;
-
-namespace SchoolSystem.Models.ViewModels.Manage
+﻿namespace SchoolSystem.Models.ViewModels.Manage
 {
+    using System.Collections.Generic;
 
     public class ConfigureTwoFactorViewModel
     {

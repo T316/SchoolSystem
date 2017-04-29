@@ -4,7 +4,6 @@ namespace SchoolSystem.Data
     using SchoolSystem.Data.Interfaces;
     using SchoolSystem.Models.EntityModels;
     using System.Data.Entity;
-    using System;
 
     public class SchoolSystemContext : IdentityDbContext<User>, ISchoolSystemContext
     {

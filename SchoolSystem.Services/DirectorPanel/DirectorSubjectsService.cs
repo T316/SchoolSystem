@@ -1,21 +1,15 @@
-﻿using SchoolSystem.Services.Interfaces.DirectorPanel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolSystem.Models.EntityModels;
-using AutoMapper;
-using SchoolSystem.Models.ViewModels.DirectorPanel;
-using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
-using System.Data.Entity;
-using SchoolSystem.Data;
-using SchoolSystem.Data.Interfaces;
-using System.Diagnostics;
-using System.Data.Entity.Validation;
-
-namespace SchoolSystem.Services.DirectorPanel
+﻿namespace SchoolSystem.Services.DirectorPanel
 {
+    using SchoolSystem.Services.Interfaces.DirectorPanel;
+    using System.Collections.Generic;
+    using System.Linq;
+    using SchoolSystem.Models.EntityModels;
+    using AutoMapper;
+    using SchoolSystem.Models.ViewModels.DirectorPanel;
+    using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
+    using System.Data.Entity;
+    using SchoolSystem.Data.Interfaces;
+
     public class DirectorSubjectsService : Service, IDirectorSubjectsService
     {
         public DirectorSubjectsService(ISchoolSystemContext context) : base(context)

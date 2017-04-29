@@ -1,9 +1,8 @@
-﻿using System.Data.Entity;
-using SchoolSystem.Models.EntityModels;
-using System.Linq;
-
-namespace SchoolSystem.Data.Mocks
+﻿namespace SchoolSystem.Data.Mocks
 {
+    using SchoolSystem.Models.EntityModels;
+    using System.Linq;
+
     public class FakeNotesDbSet : FakeDbSet<Note>
     {
         public override Note Find(params object[] keyValues)

@@ -1,9 +1,9 @@
-﻿using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Web.Attritutes;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
+﻿namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
 {
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Web.Attritutes;
+    using System.Web.Mvc;
+
     [MyAuthorize]
     [RouteArea("SchoolDiary")]
     public class GradesController : Controller
@@ -19,7 +19,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         public ActionResult All()
         {
             var vms = this.service.GetAllGrades();
-            return View(vms);
+            return this.View(vms);
         }
     }
 }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.ViewModels.DirectorPanel.Grades
+﻿namespace SchoolSystem.Models.ViewModels.DirectorPanel.Grades
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class DirectorAllGradesVm
     {
         public int Id { get; set; }

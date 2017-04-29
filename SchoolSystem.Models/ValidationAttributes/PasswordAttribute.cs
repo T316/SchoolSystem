@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.ValidationAttributes
+﻿namespace SchoolSystem.Models.ValidationAttributes
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text.RegularExpressions;
+
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
     public class PasswordAttribute : ValidationAttribute
     {

@@ -1,9 +1,9 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-
-namespace SchoolSystem.Data.Interfaces
+﻿namespace SchoolSystem.Data.Interfaces
 {
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    using SchoolSystem.Models.EntityModels;
+
     public interface ISchoolSystemContext
     {
         DbSet<Teacher> Teachers { get; set; }

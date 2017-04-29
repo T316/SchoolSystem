@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.ViewModels.SchoolDiary.Grades
+﻿namespace SchoolSystem.Models.ViewModels.SchoolDiary.Grades
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class AllGradesVm
     {
         public int Id { get; set; }

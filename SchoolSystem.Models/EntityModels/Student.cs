@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.EntityModels
+﻿namespace SchoolSystem.Models.EntityModels
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Student
     {
         public Student()
@@ -19,7 +19,6 @@ namespace SchoolSystem.Models.EntityModels
         public string Name { get; set; }
 
         [Required(ErrorMessage = "ЕГН е задължително.")]
-        [RegularExpression("^\\d{2}(0[1-9]|1[0-2])(0[1-9]|1\\d|2\\d|3[0-1])\\d{4}$", ErrorMessage = "ЕГН трябва да е валидно.")]
         public string PersonalNumber { get; set; }
 
         [MaxLength(50, ErrorMessage = "Адресат трябва да е максимум 50 символа.")]

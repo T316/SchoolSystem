@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Attritutes
+﻿namespace SchoolSystem.Web.Attritutes
 {
+    using System.Linq;
+    using System.Web.Mvc;
+
     public class MyAuthorizeAttribute : AuthorizeAttribute
     {
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)

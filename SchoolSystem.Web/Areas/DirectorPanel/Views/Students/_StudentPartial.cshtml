@@ -13,7 +13,7 @@
     </div>
     <br />
     <table class="table students-table">
-        @foreach (var student in Model.Students)
+        @foreach (var student in Model.Students.OrderBy(s => s.Name))
             {
             <tr>
                 <td>

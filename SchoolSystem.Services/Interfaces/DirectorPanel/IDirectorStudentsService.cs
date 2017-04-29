@@ -1,13 +1,9 @@
-﻿using SchoolSystem.Models.ViewModels.DirectorPanel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolSystem.Models.BindingModels.DirectorPanel.Students;
-
-namespace SchoolSystem.Services.Interfaces.DirectorPanel
+﻿namespace SchoolSystem.Services.Interfaces.DirectorPanel
 {
+    using SchoolSystem.Models.ViewModels.DirectorPanel;
+    using System.Collections.Generic;
+    using SchoolSystem.Models.BindingModels.DirectorPanel.Students;
+
     public interface IDirectorStudentsService
     {
         void AddStudent(StudentBm bind, int id);

@@ -1,9 +1,7 @@
-﻿using SchoolSystem.Data;
-using SchoolSystem.Data.Interfaces;
-using SchoolSystem.Data.Mocks;
-
-namespace SchoolSystem.Services
+﻿namespace SchoolSystem.Services
 {
+    using SchoolSystem.Data.Interfaces;
+
     public class Service
     {
         private ISchoolSystemContext context;

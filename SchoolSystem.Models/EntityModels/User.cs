@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Claims;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.EntityModels
+﻿namespace SchoolSystem.Models.EntityModels
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using System.ComponentModel.DataAnnotations;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
     public class User : IdentityUser
     {
         [Required(ErrorMessage = "Името е задължително.")]

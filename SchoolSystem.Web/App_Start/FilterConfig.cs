@@ -1,9 +1,7 @@
-﻿using System;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web
+﻿namespace SchoolSystem.Web
 {
+    using System.Web.Mvc;
+
     public class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)

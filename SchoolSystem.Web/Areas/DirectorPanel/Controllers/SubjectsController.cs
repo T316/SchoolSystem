@@ -1,14 +1,10 @@
-﻿using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
-using SchoolSystem.Services.Interfaces.DirectorPanel;
-using SchoolSystem.Web.Attritutes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
+﻿namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 {
+    using SchoolSystem.Models.BindingModels.DirectorPanel.Subjects;
+    using SchoolSystem.Services.Interfaces.DirectorPanel;
+    using SchoolSystem.Web.Attritutes;
+    using System.Web.Mvc;
+
     [MyAuthorize(Roles = "Director")]
     [RouteArea("DirectorPanel")]
     public class SubjectsController : Controller
@@ -25,13 +21,13 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         {
             var vms = this.service.GetAllGrades();
 
-            return View(vms);
+            return this.View(vms);
         }
 
         [Route("Grades/{id}/AddSubject")]
         public ActionResult Add()
         {
-            return View();
+            return this.View();
         }
 
         [HttpPost]
@@ -45,7 +41,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             if (ModelState.IsValid)
             {
                 this.service.AddSubject(bind, id);
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
 
             return this.View();
@@ -55,7 +51,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         public ActionResult Remove(int id)
         {
             this.service.RemoveSubject(id);
-            return RedirectToAction("All");
+            return this.RedirectToAction("All");
         }
 
         [Route("Subjects/{id}/AddTeacher")]
@@ -76,7 +72,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             if (ModelState.IsValid)
             {
                 this.service.AddTeacherToSubject(bind, id);
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
 
             return this.View();
@@ -102,7 +98,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             if (ModelState.IsValid)
             {
                 this.service.EditTeacherToSubject(bind, id);
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
 
             return this.View(bind);

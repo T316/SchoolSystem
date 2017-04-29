@@ -1,14 +1,10 @@
-﻿using SchoolSystem.Models.ViewModels.DirectorPanel;
-using SchoolSystem.Services.Interfaces.DirectorPanel;
-using SchoolSystem.Web.Attritutes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
+﻿namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 {
+    using SchoolSystem.Models.ViewModels.DirectorPanel;
+    using SchoolSystem.Services.Interfaces.DirectorPanel;
+    using SchoolSystem.Web.Attritutes;
+    using System.Web.Mvc;
+
     [MyAuthorize(Roles = "Director")]
     [RouteArea("DirectorPanel")]
     [RoutePrefix("Grades")]
@@ -25,13 +21,13 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         public ActionResult All()
         {
             var vms = this.service.GetAllGrades();
-            return View(vms);
+            return this.View(vms);
         }
 
         [Route("Add")]
         public ActionResult Add()
         {
-            return View();
+            return this.View();
         }
 
         [HttpPost]
@@ -46,17 +42,17 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.AddGrade(bind);
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
             
-            return View();
+            return this.View();
         }
 
         [Route("Remove/{id}")]
         public ActionResult Remove(int id)
         {
             this.service.RemoveGrade(id);
-            return RedirectToAction("All");
+            return this.RedirectToAction("All");
         }
     }
 }

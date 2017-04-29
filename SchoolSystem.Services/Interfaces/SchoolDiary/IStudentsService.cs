@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using SchoolSystem.Models.ViewModels.SchoolDiary;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
-
-namespace SchoolSystem.Services.Interfaces.SchoolDiary
+﻿namespace SchoolSystem.Services.Interfaces.SchoolDiary
 {
+    using System.Collections.Generic;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
+
     public interface IStudentsService
     {
         StudentDetailsVm GetStudentDetails(int id);

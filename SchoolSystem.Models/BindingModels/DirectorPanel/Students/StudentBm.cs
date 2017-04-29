@@ -1,13 +1,8 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.BindingModels.DirectorPanel.Students
+﻿namespace SchoolSystem.Models.BindingModels.DirectorPanel.Students
 {
+    using System.ComponentModel.DataAnnotations;
+    using SchoolSystem.Models.EntityModels;
+
     public class StudentBm
     {
         [Required(ErrorMessage = "Името е задължително.")]

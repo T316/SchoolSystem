@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.EntityModels
+﻿namespace SchoolSystem.Models.EntityModels
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Teacher
     {
         public Teacher()

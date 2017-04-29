@@ -1,13 +1,8 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.ViewModels.SchoolDiary.Subjects
+﻿namespace SchoolSystem.Models.ViewModels.SchoolDiary.Subjects
 {
+    using SchoolSystem.Models.EntityModels;
+    using System.ComponentModel.DataAnnotations;
+
     public class SubjectDetailsVm
     {
         public int Id { get; set; }

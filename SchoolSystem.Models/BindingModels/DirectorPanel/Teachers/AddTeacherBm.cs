@@ -1,13 +1,7 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.BindingModels.DirectorPanel.Teachers
+﻿namespace SchoolSystem.Models.BindingModels.DirectorPanel.Teachers
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class AddTeacherBm
     {
         [Required(ErrorMessage = "Потребителското име е задължително.")]

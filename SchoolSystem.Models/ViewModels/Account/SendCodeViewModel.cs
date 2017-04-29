@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace SchoolSystem.Models.ViewModels.Account
+﻿namespace SchoolSystem.Models.ViewModels.Account
 {
+    using System.Collections.Generic;
+
     public class SendCodeViewModel
     {
         public string SelectedProvider { get; set; }

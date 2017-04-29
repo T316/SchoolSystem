@@ -1,7 +1,7 @@
-﻿using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.SchoolDiary
+﻿namespace SchoolSystem.Web.Areas.SchoolDiary
 {
+    using System.Web.Mvc;
+
     public class SchoolDiaryAreaRegistration : AreaRegistration 
     {
         public override string AreaName 

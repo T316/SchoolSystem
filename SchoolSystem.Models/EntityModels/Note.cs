@@ -1,8 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.EntityModels
+﻿namespace SchoolSystem.Models.EntityModels
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
     public class Note
     {
         [Key]

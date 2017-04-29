@@ -1,17 +1,13 @@
-﻿using AutoMapper;
-using SchoolSystem.Models.EntityModels;
-using SchoolSystem.Models.ViewModels.SchoolDiary;
-using SchoolSystem.Services.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
-using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Data;
-using SchoolSystem.Data.Interfaces;
-
-namespace SchoolSystem.Services.SchoolDiary
+﻿namespace SchoolSystem.Services.SchoolDiary
 {
+    using AutoMapper;
+    using SchoolSystem.Models.EntityModels;
+    using System.Collections.Generic;
+    using System.Linq;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Students;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Data.Interfaces;
+
     public class StudentsService : Service, IStudentsService
     {
         public StudentsService(ISchoolSystemContext context) : base(context)
@@ -20,7 +16,7 @@ namespace SchoolSystem.Services.SchoolDiary
 
         public IEnumerable<AllStudentsFromGradeVm> GetAllStudentsForGrade(int id)
         {
-            IEnumerable<Student> allStudents = this.Context.Students.Where(student => student.Grade.Id == id);
+            IEnumerable<Student> allStudents = this.Context.Students.Where(student => student.Grade.Id == id).OrderBy(s => s.Name);
             IEnumerable<AllStudentsFromGradeVm> vms = Mapper.Instance.Map<IEnumerable<Student>, IEnumerable<AllStudentsFromGradeVm>>(allStudents);
 
             return vms;

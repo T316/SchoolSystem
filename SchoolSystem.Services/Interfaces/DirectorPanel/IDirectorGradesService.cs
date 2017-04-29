@@ -1,13 +1,9 @@
-﻿using SchoolSystem.Models.ViewModels.DirectorPanel.Grades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SchoolSystem.Models.ViewModels.DirectorPanel;
-
-namespace SchoolSystem.Services.Interfaces.DirectorPanel
+﻿namespace SchoolSystem.Services.Interfaces.DirectorPanel
 {
+    using SchoolSystem.Models.ViewModels.DirectorPanel.Grades;
+    using System.Collections.Generic;
+    using SchoolSystem.Models.ViewModels.DirectorPanel;
+
     public interface IDirectorGradesService
     {
         IEnumerable<DirectorAllGradesVm> GetAllGrades();

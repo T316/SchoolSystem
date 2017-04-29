@@ -1,11 +1,10 @@
-﻿using SchoolSystem.Data.Interfaces;
-using SchoolSystem.Models.EntityModels;
-using System.Data.Entity;
-using System;
-using System.Data.Entity.Infrastructure;
-
-namespace SchoolSystem.Data.Mocks
+﻿namespace SchoolSystem.Data.Mocks
 {
+    using SchoolSystem.Data.Interfaces;
+    using SchoolSystem.Models.EntityModels;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+
     public class FakeSchoolSystemContext : ISchoolSystemContext
     {
         public FakeSchoolSystemContext()

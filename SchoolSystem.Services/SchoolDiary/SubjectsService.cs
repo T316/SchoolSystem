@@ -1,17 +1,13 @@
-﻿using AutoMapper;
-using SchoolSystem.Models.EntityModels;
-using SchoolSystem.Models.ViewModels.SchoolDiary;
-using SchoolSystem.Services.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Subjects;
-using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Data;
-using SchoolSystem.Data.Interfaces;
-
-namespace SchoolSystem.Services.SchoolDiary
+﻿namespace SchoolSystem.Services.SchoolDiary
 {
+    using AutoMapper;
+    using SchoolSystem.Models.EntityModels;
+    using System.Collections.Generic;
+    using System.Linq;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Subjects;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Data.Interfaces;
+
     public class SubjectsService : Service, ISubjectsService
     {
         public SubjectsService(ISchoolSystemContext context) : base(context)

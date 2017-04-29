@@ -1,10 +1,9 @@
-﻿using SchoolSystem.Models.ValidationAttributes;
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace SchoolSystem.Models.ViewModels.Account
+﻿namespace SchoolSystem.Models.ViewModels.Account
 {
+    using SchoolSystem.Models.ValidationAttributes;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "Електроната поща е задължителна.")]

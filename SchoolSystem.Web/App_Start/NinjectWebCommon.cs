@@ -5,13 +5,9 @@ namespace SchoolSystem.Web.App_Start
 {
     using System;
     using System.Web;
-
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
     using Ninject;
     using Ninject.Web.Common;
-    using SchoolSystem.Services.Interfaces;
-    using SchoolSystem.Services;
     using SchoolSystem.Services.Interfaces.SchoolDiary;
     using SchoolSystem.Services.SchoolDiary;
     using SchoolSystem.Services.Interfaces.DirectorPanel;

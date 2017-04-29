@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.ViewModels.Account
+﻿namespace SchoolSystem.Models.ViewModels.Account
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class ExternalLoginConfirmationViewModel
     {
         [Required(ErrorMessage = "Електроната поща е задължителна.")]

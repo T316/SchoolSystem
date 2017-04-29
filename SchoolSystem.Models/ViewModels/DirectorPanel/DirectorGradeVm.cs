@@ -1,13 +1,9 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolSystem.Models.ViewModels.DirectorPanel
+﻿namespace SchoolSystem.Models.ViewModels.DirectorPanel
 {
+    using SchoolSystem.Models.EntityModels;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class DirectorGradeVm
     {
         public int Id { get; set; }

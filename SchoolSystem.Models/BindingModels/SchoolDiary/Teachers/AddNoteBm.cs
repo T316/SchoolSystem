@@ -1,13 +1,7 @@
-﻿using SchoolSystem.Models.EntityModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SchoolSystem.Models.BindingModels.SchoolDiary.Teachers
+{
+    using System.ComponentModel.DataAnnotations;
 
-namespace SchoolSystem.Models.BindingModels.SchoolDiary.Teachers
-{ 
     public class AddNoteBm
     {
         [Required(ErrorMessage = "Полето е задължително.")]

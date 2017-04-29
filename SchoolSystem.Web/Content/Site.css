@@ -146,6 +146,10 @@ textarea {
     display: inline-block;
 }
 
+.edit-mark-btn {
+    width: 90%;
+} 
+
 .all-grades-btn {
     width: 48%;
     display: inline-block;
@@ -160,8 +164,12 @@ textarea {
 }
 
 .subjects-btn {
-    width: 82%;
+    width: 100%;
 }
+
+.subject-info-btn {
+    width: 90%;
+} 
 
 .btn-info:hover {
     background-color: darkslateblue;
@@ -330,6 +338,14 @@ tr > td {
         width: 65%;
     }
 
+    .subject-info-btn {
+        width: 100%;
+    }
+
+    .edit-mark-btn {
+        width: 100%;
+    }
+
     .student-btn {
         width: 24%;
     }
@@ -347,7 +363,7 @@ tr > td {
     }
 
     .submit-btn {
-        width: 50%;
+        width: 30%;
     }
 
     .add-btn {
@@ -359,7 +375,7 @@ tr > td {
     }
 
     .remove-teacher-btn {
-        width: 95%;
+        width: 100%;
     }
 
     .add-subject-btn {
@@ -371,35 +387,34 @@ tr > td {
     }
 
     .remove-student-btn {
-        width: 94%;
+        width: 100%;
     }
 
     .subjects-btn {
-        width: 84%;
+        width: 100%;
     }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-    .navbar-nav > li > a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav > li > a {
-        display: inline-block;
-    }
-
-    .navbar-right {
-        margin-right: 0px;
-    }
-
     .btn {
         width: 65%;
     }
 
+    .submit-btn {
+        width: 30%;
+    }
+
+    .subjects-btn {
+        width: 100%;
+    }
+
     .student-btn{
         width: 24%;
+    }
+
+    .edit-mark-btn {
+        width: 100%;
     }
 
     .all-grades-btn {
@@ -414,10 +429,6 @@ tr > td {
         width: 16%;
     }
 
-    .submit-btn {
-        width: 50%;
-    }
-
     .add-btn {
         width: 18%;
     }
@@ -427,7 +438,7 @@ tr > td {
     }
 
     .remove-teacher-btn {
-        width: 95%;
+        width: 100%;
     }
 
     .add-subject-btn {
@@ -439,11 +450,7 @@ tr > td {
     }
 
     .remove-student-btn {
-        width: 94%;
-    }
-
-    .subjects-btn {
-        width: 84%;
+        width: 100%;
     }
 
     .navbar-header {
@@ -489,6 +496,24 @@ tr > td {
     .collapse.in {
         display: block !important;
     }
+
+    .navbar-nav > li > a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav > li > a {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        margin-right: 0px;
+    }
+
+    .subject-info-btn {
+        width: 100%;
+    }
+
 }
 
 /* Small Devices, Tablets */
@@ -512,6 +537,14 @@ tr > td {
 
     .nav > li > a {
         display: inline-block;
+    }
+
+    .submit-btn {
+        width: 30%;
+    }
+
+    .subjects-info-btn {
+        width: 100%;
     }
 
     #about-us {
@@ -637,6 +670,26 @@ tr > td {
     .form-horizontal .form-group {
         margin-left: 15%;
     }
+
+    .remove-teacher-btn {
+        width: 100%;
+    }
+
+    .subject-info-btn {
+        width: 80%;
+    }
+
+    .edit-mark-btn {
+        width: 80%;
+    }
+
+    #login-btn {
+        margin-left: 40px;
+    }
+
+    #registration-btn {
+        margin-left: 40px;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -659,7 +712,7 @@ tr > td {
     }
 
     .form-group > div > input[type="submit"] {
-        margin-left: 20px;
+        margin-left: 63px;
     }
 
     #about-us {
@@ -754,7 +807,7 @@ tr > td {
     }
 
     .subjects-btn {
-        width: 70%;
+        width: 100%;
     }
 
     .remove-grade-btn {
@@ -780,6 +833,30 @@ tr > td {
     .form-horizontal .form-group {
         margin-left: 0%;
     }
+
+    .edit-mark-btn {
+        width: 100%;
+    }
+
+    .subject-info-btn {
+        width: 100%;
+    }
+
+    .remove-teacher-btn {
+        width: 100%;
+    }
+
+    .btn-group-vertical {
+        margin: 0px;
+    }
+
+    #login-btn {
+        margin-left: 20px;
+    }
+
+    #registration-btn {
+        margin-left: 20px;
+    }
 }
 
 /* Custom, iPhone Retina */
@@ -802,7 +879,7 @@ tr > td {
     }
 
     .form-group > div > input[type="submit"] {
-        margin-left: 0px;
+        margin-left: 40px;
     }
 
     #about-us {
@@ -938,5 +1015,13 @@ tr > td {
 
     .table > tbody > tr > td {
         padding-right: 0px;
+    }
+
+    #login-btn {
+        margin-left: 0px;
+    }
+
+    #registration-btn {
+        margin-left: 0px;
     }
 }

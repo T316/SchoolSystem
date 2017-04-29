@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.ViewModels.Manage
+﻿namespace SchoolSystem.Models.ViewModels.Manage
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class SetPasswordViewModel
     {
         [Required]

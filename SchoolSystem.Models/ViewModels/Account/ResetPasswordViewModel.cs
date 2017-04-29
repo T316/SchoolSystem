@@ -1,8 +1,8 @@
-﻿using SchoolSystem.Models.ValidationAttributes;
-using System.ComponentModel.DataAnnotations;
-
-namespace SchoolSystem.Models.ViewModels.Account
+﻿namespace SchoolSystem.Models.ViewModels.Account
 {
+    using SchoolSystem.Models.ValidationAttributes;
+    using System.ComponentModel.DataAnnotations;
+
     public class ResetPasswordViewModel
     {
         [Required(ErrorMessage = "Електроната поща е задължителна.")]

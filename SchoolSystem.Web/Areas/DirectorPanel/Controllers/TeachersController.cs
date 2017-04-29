@@ -1,19 +1,14 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using SchoolSystem.Data;
-using SchoolSystem.Models.BindingModels.DirectorPanel;
-using SchoolSystem.Models.BindingModels.DirectorPanel.Teachers;
-using SchoolSystem.Services.Interfaces;
-using SchoolSystem.Services.Interfaces.DirectorPanel;
-using SchoolSystem.Web.Attritutes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
+﻿namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+    using SchoolSystem.Data;
+    using SchoolSystem.Models.BindingModels.DirectorPanel.Teachers;
+    using SchoolSystem.Services.Interfaces.DirectorPanel;
+    using SchoolSystem.Web.Attritutes;
+    using System.Web;
+    using System.Web.Mvc;
+
     [MyAuthorize(Roles = "Director")]
     [RouteArea("DirectorPanel")]
     [RoutePrefix("Teachers")]
@@ -45,7 +40,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
         public ActionResult All()
         {
             var vms = this.service.getAllTeachers();
-            return View(vms);
+            return this.View(vms);
         }
 
         [Route("Add")]
@@ -74,7 +69,7 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
             {
                 this.service.AddTeacher(user);
                 this.UserManager.AddToRole(user.Id, "Teacher");
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
 
             return this.View();
@@ -90,10 +85,10 @@ namespace SchoolSystem.Web.Areas.DirectorPanel.Controllers
                 var user = this.service.GetUserByTeacherId(teacher.User.Id);
                 this.service.RemoveTeacher(id);
                 this.UserManager.RemoveFromRoles(user.Id, "Teacher");
-                return RedirectToAction("All");
+                return this.RedirectToAction("All");
             }
 
-            return RedirectToAction("All");
+            return this.RedirectToAction("All");
         }
     }
 }

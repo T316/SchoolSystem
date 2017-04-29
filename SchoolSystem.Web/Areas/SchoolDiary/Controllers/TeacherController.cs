@@ -1,17 +1,11 @@
-﻿using SchoolSystem.Models.BindingModels;
-using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
-using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
-using SchoolSystem.Services.Interfaces;
-using SchoolSystem.Services.Interfaces.SchoolDiary;
-using SchoolSystem.Web.Attritutes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
+﻿namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
 {
+    using SchoolSystem.Models.BindingModels.SchoolDiary.Teachers;
+    using SchoolSystem.Models.ViewModels.SchoolDiary.Teachers;
+    using SchoolSystem.Services.Interfaces.SchoolDiary;
+    using SchoolSystem.Web.Attritutes;
+    using System.Web.Mvc;
+
     [MyAuthorize(Roles = "Teacher")]
     [RouteArea("SchoolDiary")]
     public class TeacherController : Controller
@@ -27,34 +21,34 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         public ActionResult AddAbsence(int id)
         {
             this.service.AddAbsence(id);
-            return RedirectToAction("StudentAbsences", "Students", new { id = id });
+            return this.RedirectToAction("StudentAbsences", "Students", new { id = id });
         }
 
         [Route("RemoveAbsence/{id}")]
         public ActionResult RemoveAbsence(int id)
         {
             this.service.RemoveAbsence(id);
-            return RedirectToAction("StudentAbsences", "Students", new { id = id });
+            return this.RedirectToAction("StudentAbsences", "Students", new { id = id });
         }
 
         [Route("AddDelay/{id}")]
         public ActionResult AddDelay(int id)
         {
             this.service.AddDelay(id);
-            return RedirectToAction("StudentAbsences", "Students", new { id = id });
+            return this.RedirectToAction("StudentAbsences", "Students", new { id = id });
         }
 
         [Route("RemoveDelay/{id}")]
         public ActionResult RemoveDelay(int id)
         {
             this.service.RemoveDelay(id);
-            return RedirectToAction("StudentAbsences", "Students", new { id = id });
+            return this.RedirectToAction("StudentAbsences", "Students", new { id = id });
         }
 
         [Route("Student/{id}/AddNote")]
         public ActionResult AddNote()
         {
-            return View();
+            return this.View();
         }
 
         [HttpPost]
@@ -69,7 +63,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.AddNote(bind, id);
-                return RedirectToAction("StudentNotes", "Students");
+                return this.RedirectToAction("StudentNotes", "Students");
             }
 
             return this.View();
@@ -80,7 +74,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
         {
             var vm = this.service.GetStudentForAddMark(id);
 
-            return View(vm);
+            return this.View(vm);
         }
 
         [HttpPost]
@@ -100,7 +94,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.AddMark(vm);
-                return RedirectToAction("StudentMarks", "Students", new { id = vm.StudentId });
+                return this.RedirectToAction("StudentMarks", "Students", new { id = vm.StudentId });
             }
 
             return this.View(vm);
@@ -131,7 +125,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.EditMark(vm, id);
-                return RedirectToAction("StudentMarks", "Students", new { id = vm.StudentId });
+                return this.RedirectToAction("StudentMarks", "Students", new { id = vm.StudentId });
             }
 
             return this.View(vm);
@@ -157,7 +151,7 @@ namespace SchoolSystem.Web.Areas.SchoolDiary.Controllers
             if (this.ModelState.IsValid)
             {
                 this.service.EditStudentInfo(vm);
-                return RedirectToAction("StudentDetails", "Students", new { id = vm.Id });
+                return this.RedirectToAction("StudentDetails", "Students", new { id = vm.Id });
             }
 
             return this.View(vm);
